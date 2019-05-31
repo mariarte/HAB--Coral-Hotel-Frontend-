@@ -1,0 +1,50 @@
+<div class="area">
+    <nav class="main-menu">
+        <ul>
+            <li class="has-subnav">
+                <a>
+                    <i class="far fa-smile fa-2x"></i>
+                    <span class="nav-text">Bienvenid@ {{ userService.currentUser?.fullName }}</span
+          >
+        </a>
+      </li>
+
+      <hr />
+
+      <li class="has-subnav">
+        <a routerLink="/welcome">
+          <i class="fa fa-home fa-2x"></i>
+          <span class="nav-text">Inicio</span>
+                </a>
+            </li>
+
+            <li class="has-subnav">
+                <a routerLink="/private-area">
+                    <i class="fa fa-table fa-2x"></i>
+                    <span class="nav-text">Experiencias</span>
+                </a>
+            </li>
+
+            <li class="has-subnav">
+                <a routerLink="/my-account">
+                    <i class="fas fa-user-cog fa-2x"></i>
+                    <span class="nav-text">Mi perfil</span>
+                </a>
+            </li>
+
+            <li class="has-subnav">
+                <a routerLink="/booking">
+                    <i class="fas fa-euro-sign fa-2x"></i>
+                    <span class="nav-text">Mis reservas</span>
+                </a>
+            </li>
+
+            <li class="has-subnav">
+                <a (click)="authService.logout()">
+                    <i class="fas fa-power-off fa-2x"></i>
+                    <span class="nav-text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

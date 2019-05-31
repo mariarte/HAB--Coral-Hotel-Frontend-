@@ -1,0 +1,115 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/*! `Custom` Bootstrap 4 theme */
+
+// @import url('https://fonts.googleapis.com/css?family=Bungee+Shade:200,300,400,700'); // poner las comillas
+// $headings-font-family:Bungee Shade;
+// $enable-grid-classes:true; // poner a true manualmente
+// $primary:#563d7c;
+// $secondary:#868e96;
+// $success:#28a745;
+// $danger:#dc3545;
+// $info:#17a2b8;
+// $warning:#ffc107;
+// $light:#f8f9fa;
+// $dark:#343434;
+// $enable-gradients:true;
+// $spacer:1rem;
+// $border-width:1px;
+// $btn-border-radius:.25rem;
+// quitar el import de aqui
+
+/*! `Custom` Bootstrap 4 theme */
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+$headings-font-family: Montserrat;
+$primary: #ff6f61;
+$secondary: #ff416c;
+$success: #28a745;
+$danger: #cc330d;
+$info: #5c8f94;
+$warning: #6e9fa5;
+$light: #eceeec;
+$dark: #1e2b37;
+$enable-gradients: false;
+$spacer: 1rem;
+$border-width: 3px;
+$btn-border-radius: 0.25rem;
+$enable-responsive-font-sizes: true;
+@import "~node_modules/bootstrap/scss/bootstrap.scss";
+.ng-touched.ng-invalid {
+    @extend .is-invalid;
+}
+
+.ng-touched.ng-valid {
+    @extend .is-valid;
+}
+
+.is-invalid,
+.is-valid {
+    .invalid-feedback {
+        display: block;
+    }
+}
+
+//Cursor de manita en los links
+a {
+    cursor: pointer !important;
+}
+
+button {
+    $height: 40px;
+    width: 180px;
+    transform: translateZ($height);
+    cursor: pointer;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    font: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    padding: 0.8em 1em;
+    border-radius: 100px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    border: 1px solid #ff6f61;
+    background-color: #ff6f61;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 300ms ease;
+    &:before {
+        transition: 300ms ease;
+        position: absolute;
+        display: block;
+        content: "";
+        transform: translateZ(-$height);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        height: calc(100% - 20px);
+        width: calc(100% - 20px);
+        border-radius: 100px;
+        left: 10px;
+        top: 16px;
+    }
+    &:hover {
+        border-color: #000;
+        color: #000;
+        transform: translateZ($height + 15px);
+        &:before {
+            transform: translateZ(-($height + 15px));
+        }
+    }
+    &:active {
+        transform: translateZ($height/2);
+        transform: scale(0.9);
+        &:before {
+            transform: translateZ(-($height/2));
+            top: 12px;
+        }
+    }
+    &:focus {
+        outline: none;
+    }
+}

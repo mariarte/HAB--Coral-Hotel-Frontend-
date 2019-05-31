@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css?family=Reenie+Beanie");
+// @import "colors.scss";
+:host {
+    background: #f6f5f7;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    // flex-direction: column;
+    // height: 80vh;
+    // margin: -20px 0 50px;
+    // padding: 20px;
+}
+
+.container {
+    /*contenedor general*/
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    height: 80vh;
+    /*Anchura total del contenedor*/
+    max-width: 800px;
+    // min-height: 480px;
+    min-width: 800px;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+// div {
+//     // position: absolute;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     margin: 0;
+//     padding: 0;
+// }
+div.titles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+// div.programmer {
+//     position: relative;
+//     top: 80px;
+//     left: 120px;
+//     width: 50px;
+//     z-index: 1;
+// }
+div.post-itdiv {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    // flex-basis: 50%;
+    margin: 0;
+    padding: 0;
+    // z-index: 999;
+    // width: 650px;
+    // height: 350px;
+}
+
+div.links {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    // top: 300px;
+    // left: 120px;
+}
+
+div.emailBottom {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    // top: 300px;
+    // left: 120px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 28px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+a {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    // font-weight: bolder;
+}
+
+// icono carita grande
+div>i {
+    font-size: 7rem;
+}
+
+button.social {
+    border-radius: 40px;
+    border: 1px solid #ff6f61;
+    /*FF4B2B*/
+    background-color: #ff6f61;
+    width: 50px;
+    height: 50px;
+    margin-top: 8px;
+}
+
+i.social {
+    color: #ffffff;
+    font-size: 35px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.sendEmail {
+    border-radius: 40px;
+    border: 1px solid #fff;
+    /*FF4B2B*/
+    background-color: #000;
+    width: 50px;
+    height: 50px;
+    // padding: 10px;
+}
+
+i.email {
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+    vertical-align: center;
+}
+
+button:active {
+    transform: scale(0.9);
+    /*Cuando pinchamos en el boton se hace mas pequeño*/
+}
+
+button:hover {
+    border: 1px solid #000;
+}
+
+button:hover.sendEmail {
+    border: 2px solid #ff6f61;
+    /*FF4B2B*/
+}
+
+
+/*Estilo post-it*/
+
+ul,
+li {
+    list-style: none;
+}
+
+ul {
+    overflow: hidden;
+    // margin: 0px 15px;
+    // padding: 3em;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+    background: #ffe4e2;
+    display: block;
+    height: 12em;
+    width: 12em;
+    padding: 1em;
+    /* Firefox */
+    -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
+    /* Safari+Chrome */
+    -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+    /* Opera */
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+}
+
+ul li:nth-child(even) a {
+    -o-transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    position: relative;
+    top: 5px;
+}
+
+ul li a:hover,
+ul li a:focus {
+    -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    position: relative;
+    z-index: 5;
+}
+
+ul li {
+    margin: 1.5em;
+    float: left;
+}
+
+ul li h2 {
+    font-family: "Montserrat", arial, sans-se;
+    font-size: 30px;
+    // font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+p.postit {
+    font-family: "Reenie Beanie", arial, sans-se;
+    font-size: 20px;
+}
+
+img.programmer_img {
+    width: 25%;
+    height: 25%;
+    margin: 0;
+    padding: 0;
+    // -o-transform: rotate(4deg);
+    // -webkit-transform: rotate(4deg);
+    // -moz-transform: rotate(4deg);
+    position: relative;
+    top: 115px;
+    left: 140px;
+    z-index: 1;
+}
+
+img.hab {
+    width: 15%;
+    height: 15%;
+    margin: 0;
+    padding: 0;
+    -o-transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    position: relative;
+    top: 110px;
+    left: -180px;
+    z-index: 1;
+}

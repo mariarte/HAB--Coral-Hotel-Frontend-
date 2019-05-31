@@ -1,0 +1,21 @@
+<div class="content">
+    <div class="form_data">
+        <form class="p-5" [formGroup]="updateProfileForm" [snMarkAsTouched]="updateProfileForm">
+            <div class="form-group">
+                <label>Nombre</label>
+                <input class="form-control" type="text" formControlName="fullName" placeholder="Tu nombre..." />
+                <sn-validation-messages [control]="updateProfileForm.get('fullName')"></sn-validation-messages>
+            </div>
+
+            <div class="form-group mt-5">
+                <label>Email</label>
+                <input class="email-not-modif form-control" type="text" formControlName="email" readonly />
+            </div>
+        </form>
+    </div>
+
+    <div class="form_butt p-5 mt-4">
+        <button (click)="updateProfile()" class="m-2" type="submit"><i class="far fa-save"></i> Actualizar</button>
+        <button (click)="deleteProfile()" class="m-2" type="submit"><i class="far fa-trash-alt"></i> Borrar user</button>
+    </div>
+</div>

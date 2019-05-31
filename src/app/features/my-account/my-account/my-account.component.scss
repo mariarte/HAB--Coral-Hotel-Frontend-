@@ -1,0 +1,15 @@
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+div.form_data {
+    width: 70%;
+}
+
+input.email-not-modif {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background: transparent;
+}

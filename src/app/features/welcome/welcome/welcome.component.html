@@ -1,0 +1,65 @@
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form [formGroup]="registerForm" [snMarkAsTouched]="registerForm" (ngSubmit)="register()">
+            <h1 class="mb-4">Alta cliente</h1>
+            <div class="form-group">
+                <input class="form-control" type="text" formControlName="fullName" placeholder="Nombre " />
+                <sn-validation-messages [control]="registerForm.get('fullName')"></sn-validation-messages>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" formControlName="email" placeholder="Email" />
+                <sn-validation-messages [control]="registerForm.get('email')"></sn-validation-messages>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" formControlName="password" placeholder="Password" />
+                <sn-validation-messages [control]="registerForm.get('password')"></sn-validation-messages>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" formControlName="confirmPassword" placeholder="Confirma tu contraseña" />
+                <sn-validation-messages [control]="registerForm.get('confirmPassword')" [group]="registerForm"></sn-validation-messages>
+            </div>
+            <div class="form-group">
+                <button class="button m-3">
+          <i class="far fa-id-badge"></i> Registrar
+        </button>
+            </div>
+        </form>
+    </div>
+    <div class="form-container sign-in-container ">
+        <form [formGroup]="loginForm" [snMarkAsTouched]="loginForm" (ngSubmit)="login()">
+            <h1 class="mb-4">Iniciar Sesión</h1>
+            <div class="form-group">
+                <input class="form-control" type="text" formControlName="email" placeholder="Email " />
+                <sn-validation-messages [control]="loginForm.get('email')"></sn-validation-messages>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" formControlName="password" placeholder="Password " />
+                <sn-validation-messages [control]="loginForm.get('password')"></sn-validation-messages>
+            </div>
+            <div class="form-group">
+                <!-- <a>Olvidaste la contraseña?</a> -->
+                <button class="button m-3">
+          <i class="fas fa-sign-in-alt"></i> Acceder
+        </button>
+            </div>
+        </form>
+    </div>
+    <div class="overlay-container ">
+        <div class="overlay ">
+            <div class="overlay-panel overlay-left ">
+                <h1>Bienvenid@ de nuevo!</h1>
+                <p>Para conectarte con nosotros por favor introduce tus datos</p>
+                <button (click)="showLogin()" class="ghost " id="signIn ">
+          <i class="fas fa-sign-in-alt"></i> Log In
+        </button>
+            </div>
+            <div class="overlay-panel overlay-right ">
+                <h1>Hola, tu primera vez?</h1>
+                <p>Introduce tus datos para darte de alta con nosotros</p>
+                <button (click)="showRegister()" class="ghost " id="signUp ">
+          <i class="far fa-id-badge"></i> Registro
+        </button>
+            </div>
+        </div>
+    </div>
+</div>

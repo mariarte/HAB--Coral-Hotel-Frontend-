@@ -1,0 +1,26 @@
+nav {
+    background-color: #212121;
+    color: #fff;
+    font-size: 13px;
+}
+
+nav p {
+    font-family: "Montserrat", cursive;
+    letter-spacing: 0.7px;
+    margin: 8px 0;
+}
+
+nav span {
+    font-weight: bold;
+}
+
+nav a {
+    /*color de link del footer*/
+    color: #3c97bf;
+    text-decoration: none;
+}
+
+nav i {
+    /*cambiar color del icono corazon*/
+    color: #ff6f61;
+}
