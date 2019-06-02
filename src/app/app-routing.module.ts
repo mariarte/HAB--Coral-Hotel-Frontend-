@@ -33,6 +33,11 @@ const routes: Routes = [
       {
         path: "booking",
         loadChildren: "./features/booking/booking.module#BookingModule"
+      },
+      {
+        path: "booking-confirmed",
+        loadChildren:
+          "./features/booking-confirmed/booking-confirmed.module#BookingConfirmedModule"
       }
     ]
   },

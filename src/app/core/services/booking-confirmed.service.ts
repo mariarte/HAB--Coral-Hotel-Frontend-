@@ -7,19 +7,13 @@ import { Booking } from "src/app/features/booking/booking.models";
 @Injectable({
   providedIn: "root"
 })
-export class BookingService {
+export class BookingConfirmedService {
   bookings: Booking[];
   constructor(private http: HttpClient) {}
 
-  getBookings(idUser) {
+  getBookingsConfirmed(idUser) {
     return this.http
-      .get(`${environment.apiBaseUrl}/order`)
+      .get(`${environment.apiBaseUrl}/order/confirmed`)
       .pipe(tap((bookings: Booking[]) => (this.bookings = bookings)));
-  }
-
-  getOrderCount() {
-    let count = 0;
-    this.bookings.forEach(booking => (count = count + booking.units));
-    return count;
   }
 }

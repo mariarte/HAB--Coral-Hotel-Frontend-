@@ -7,7 +7,6 @@ import { tap } from "rxjs/operators";
   providedIn: "root"
 })
 export class OrderService {
-  counter = 0;
   constructor(private http: HttpClient) {}
 
   insertOrder({ experience }) {

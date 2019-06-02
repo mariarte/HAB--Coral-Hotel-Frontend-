@@ -3,6 +3,7 @@ import { UserService } from "src/app/core/services/user.service";
 import { PrivateAreaService } from "src/app/core/services/private-area.service";
 import { OrderService } from "src/app/core/services/order.service";
 import { ToastService } from "src/app/core/services/toast.service";
+import { BookingService } from "src/app/core/services/booking.service";
 import { Experience } from "src/app/features/private-area/private-area.models";
 import { BadgeComponent } from "../badge/badge.component";
 
@@ -18,6 +19,7 @@ export class CardComponent implements OnInit {
     public userService: UserService,
     public privateArea: PrivateAreaService,
     public orderService: OrderService,
+    public bookingService: BookingService,
     private toastService: ToastService
   ) {}
 
@@ -53,6 +55,7 @@ export class CardComponent implements OnInit {
       );
       experience.quantity = 1; // Reseteo las unidades de la card a 1
       experience.comments = "";
+      this.bookingService.getOrderCount(); // actualiza el número de orders en el icono de badge
     });
 
     ngmodel.reset(); // para que no me salga el estilo de form verde

@@ -1,4 +1,4 @@
-<h1>ORDER TODAS</h1>
+<h1>RESERVAS CONFIRMADAS</h1>
 <div>
     <table class="table table-striped mt-5">
         <thead>
@@ -12,7 +12,7 @@
                 <th scope="col">Fecha</th>
             </tr>
         </thead>
-        <tbody *ngFor="let booking of bookingService.bookings">
+        <tbody *ngFor="let booking of bookingConfirmedService.bookings">
             <tr>
                 <!-- <th scope="row">{{ booking.idUser }}</th>
                 <td>{{ booking.idExperience }}</td> -->

@@ -14,7 +14,7 @@ export class BookingComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.bookingService
+    this.bookingService // carga las order TODAS
       .getBookings(this.userService.currentUser.idUser)
       .subscribe();
 
