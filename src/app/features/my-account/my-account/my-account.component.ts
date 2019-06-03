@@ -1,6 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
+import { Router } from "@angular/router";
 import { UserService } from "src/app/core/services/user.service";
+import { ToastService } from "src/app/core/services/toast.service";
+import { ModalService } from "src/app/core/services/modal.service";
 
 @Component({
   selector: "sn-my-account",
@@ -13,7 +16,13 @@ export class MyAccountComponent implements OnInit {
     email: [""]
   });
 
-  constructor(private fb: FormBuilder, private userService: UserService) {}
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private userService: UserService,
+    private toastService: ToastService,
+    private modalService: ModalService
+  ) {}
 
   ngOnInit() {
     this.updateProfileForm.setValue({
@@ -26,11 +35,24 @@ export class MyAccountComponent implements OnInit {
     if (this.updateProfileForm.valid) {
       this.userService
         .updateProfile({ fullName: this.updateProfileForm.value.fullName })
-        .subscribe();
+        .subscribe(() => {
+          this.toastService.addToast(
+            "Perfil modificado",
+            "Sus datos ha sido modificados con éxito."
+          );
+        });
     }
   }
 
   deleteProfile() {
-    this.userService.deleteProfile(this.userService.currentUser).subscribe();
+    this.userService
+      .deleteProfile(this.userService.currentUser)
+      .subscribe(() => {
+        this.modalService.open(
+          "Perfil borrado!!",
+          "El perfil se ha borrado con éxito. Si lo desea puede volver a registrarse"
+        );
+        this.router.navigate(["/welcome"]);
+      });
   }
 }

@@ -55,7 +55,9 @@ export class CardComponent implements OnInit {
       );
       experience.quantity = 1; // Reseteo las unidades de la card a 1
       experience.comments = "";
-      this.bookingService.getOrderCount(); // actualiza el número de orders en el icono de badge
+      this.bookingService // Muestro las order de la cesta para que se vayan actualizando
+        .getBookings(this.userService.currentUser.idUser)
+        .subscribe();
     });
 
     ngmodel.reset(); // para que no me salga el estilo de form verde

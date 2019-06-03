@@ -1,26 +1,37 @@
-<h1>ORDER TODAS</h1>
+<h3 class="text-center mt-5">Compruebe las reservas y confirme, si lo desea:</h3>
 <div>
-    <table class="table table-striped mt-5">
+    <table class="table table-striped p-4">
         <thead>
             <tr>
-                <!-- <th scope="col">Id. Usuario</th>
+                <th scope="col">Id. Order</th>
+                <!-- 
+                <th scope="col">Id. Usuario</th>
                 <th scope="col">Id. Experiencia</th> -->
                 <th scope="col">Descripción</th>
                 <th scope="col">Unidades</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Comentarios</th>
                 <th scope="col">Fecha</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody *ngFor="let booking of bookingService.bookings">
             <tr>
+                <td>{{ booking.idOrder }}</td>
                 <!-- <th scope="row">{{ booking.idUser }}</th>
                 <td>{{ booking.idExperience }}</td> -->
                 <td>{{booking.title}}</td>
-                <td>{{ booking.units }}</td>
+                <td>
+                    <span class="fa fa-angle-left angle" (click)="substractQuantity(booking)"></span>
+                    <span id="qt">{{ booking.units }}</span>
+                    <span class="fa fa-angle-right angle" (click)="addQuantity(booking)"></span>
+                </td>
                 <td>{{ booking.price }}</td>
-                <td class="font-italic">{{ booking.comments }}</td>
+                <td class="font-italic"><textarea>{{ booking.comments }}</textarea></td>
                 <td>{{ booking.orderDate }}</td>
+                <td><i class="fas fa-check-circle" (click)="updateOrder(booking.idOrder)"></i></td>
+                <td><i class="fas fa-trash-alt" (click)="deleteOrder(booking.idOrder)"></i></td>
             </tr>
         </tbody>
     </table>

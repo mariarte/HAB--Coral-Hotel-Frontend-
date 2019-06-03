@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "src/app/core/services/auth.service";
+import { UserService } from "src/app/core/services/user.service";
+import { BookingService } from "src/app/core/services/booking.service";
 
 @Component({
   selector: "sn-main-layout",
@@ -7,7 +9,15 @@ import { AuthService } from "src/app/core/services/auth.service";
   styleUrls: ["./main-layout.component.scss"]
 })
 export class MainLayoutComponent implements OnInit {
-  constructor(public authService: AuthService) {}
+  constructor(
+    // public userService: UserService,
+    public authService: AuthService
+  ) // public bookingService: BookingService
+  {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    // this.bookingService // Muestro las order de la cesta para que se vayan actualizando
+    //   .getBookings(this.userService.currentUser.idUser)
+    //   .subscribe();
+  }
 }

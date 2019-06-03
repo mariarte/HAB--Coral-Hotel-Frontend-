@@ -1,6 +1,6 @@
-<h1>RESERVAS CONFIRMADAS</h1>
+<h1 class="text-center mt-5">RESERVAS CONFIRMADAS</h1>
 <div>
-    <table class="table table-striped mt-5">
+    <table class="table table-striped p-4">
         <thead>
             <tr>
                 <!-- <th scope="col">Id. Usuario</th>
@@ -9,7 +9,7 @@
                 <th scope="col">Unidades</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Comentarios</th>
-                <th scope="col">Fecha</th>
+                <th scope="col">Fecha de confirmación</th>
             </tr>
         </thead>
         <tbody *ngFor="let booking of bookingConfirmedService.bookings">
@@ -17,10 +17,10 @@
                 <!-- <th scope="row">{{ booking.idUser }}</th>
                 <td>{{ booking.idExperience }}</td> -->
                 <td>{{booking.title}}</td>
-                <td>{{ booking.units }}</td>
+                <td class="text-center">{{ booking.units }}</td>
                 <td>{{ booking.price }}</td>
                 <td class="font-italic">{{ booking.comments }}</td>
-                <td>{{ booking.orderDate }}</td>
+                <td>{{ booking.confirmedAt }}</td>
             </tr>
         </tbody>
     </table>

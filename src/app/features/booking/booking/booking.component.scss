@@ -1,0 +1,41 @@
+$primary: hsl(222, 80%, 50%);
+$primary-light: hsl(222, 50%, 95%);
+$secondary: hsl(350, 80%, 50%);
+$red: hsl(10, 80%, 50%);
+$orange: hsl(50, 80%, 50%);
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.fa[class~="angle"] {
+    font-size: 1.3rem;
+    position: relative;
+    top: 0.15rem;
+    margin: 0 20px;
+    cursor: pointer;
+    color: rgb(216, 216, 216);
+    transition: all 0.5s;
+    &:hover {
+        color: #ff6f61;
+    }
+}
+
+.fas {
+    font-size: 2rem;
+}
+
+.fa-check-circle {
+    color: #33CC00;
+    &:hover {
+        color: #006600;
+    }
+}
+
+.fa-trash-alt {
+    color: red;
+    &:hover {
+        color: #990000;
+    }
+}

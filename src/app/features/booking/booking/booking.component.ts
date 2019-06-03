@@ -17,7 +17,25 @@ export class BookingComponent implements OnInit {
     this.bookingService // carga las order TODAS
       .getBookings(this.userService.currentUser.idUser)
       .subscribe();
+  }
 
-    console.log(this.userService.currentUser.fullName);
+  // añadir o restar cantidad en el boton de unidades
+  substractQuantity(booking) {
+    if (booking.units <= 1) {
+      return;
+    }
+    booking.units = booking.units - 1;
+  }
+
+  addQuantity(booking) {
+    booking.units = booking.units + 1;
+  }
+
+  updateOrder(idOrder) {
+    this.bookingService.updateOrder(idOrder).subscribe();
+  }
+
+  deleteOrder(idOrder) {
+    this.bookingService.deleteOrder(idOrder).subscribe();
   }
 }

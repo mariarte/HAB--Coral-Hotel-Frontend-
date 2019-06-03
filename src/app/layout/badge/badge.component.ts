@@ -9,7 +9,7 @@ import { UserService } from "src/app/core/services/user.service";
   styleUrls: ["./badge.component.scss"]
 })
 export class BadgeComponent implements OnInit {
-  counter = 0;
+  // counter = 0;
   constructor(
     public userService: UserService,
     public orderService: OrderService,
@@ -17,7 +17,7 @@ export class BadgeComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.bookingService.getOrderCount();
+    // this.bookingService.getOrderCount();
   }
 
   getBookings(idUser) {
