@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { AuthService } from "src/app/core/services/auth.service";
 import { UserService } from "src/app/core/services/user.service";
 import { ModalService } from "src/app/core/services/modal.service";
+import { BookingService } from "src/app/core/services/booking.service";
 
 import { MailValidator } from "../../../shared/validators/mail.validator";
 import { MatchPasswordValidator } from "../../../shared/validators/match-password.validator";
@@ -34,7 +35,8 @@ export class WelcomeComponents {
     private router: Router,
     private authService: AuthService,
     private userService: UserService,
-    private modalService: ModalService
+    private modalService: ModalService,
+    private bookingService: BookingService
   ) {}
 
   // Muestra el formulario de Registro
@@ -57,6 +59,9 @@ export class WelcomeComponents {
           this.userService.getUserProfile().subscribe();
           console.log(this.authService, this.userService);
           this.router.navigate(["/private-area"]);
+          this.bookingService
+            .getBookings(this.userService.getUserProfile())
+            .subscribe();
         },
         () => this.loginForm.get("password").setValue("")
       );
@@ -74,7 +79,7 @@ export class WelcomeComponents {
           "Gracias por tu registro!!",
           "Te hemos enviado un email con la confirmación. Será donde recibas las comunicaciones sobre tus experiencias"
         );
-        this.router.navigate(["/private-area"]);
+        // this.router.navigate(["/private-area"]);
       });
     }
   }

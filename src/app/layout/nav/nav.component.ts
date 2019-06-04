@@ -1,4 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  HostListener
+} from "@angular/core";
 import { AuthService } from "src/app/core/services/auth.service";
 import { UserService } from "src/app/core/services/user.service";
 
@@ -8,10 +14,24 @@ import { UserService } from "src/app/core/services/user.service";
   styleUrls: ["./nav.component.scss"]
 })
 export class NavComponent implements OnInit {
+  sticky = false;
+  menuPosition = 106;
+
   constructor(
     public authService: AuthService,
     public userService: UserService
   ) {}
 
   ngOnInit() {}
+
+  @HostListener("window:scroll", ["$event"])
+  handleScroll() {
+    const windowScroll = window.pageYOffset;
+    // console.log({ windowScroll, menuPosition: this.menuPosition });
+    if (windowScroll >= this.menuPosition) {
+      this.sticky = true;
+    } else {
+      this.sticky = false;
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { BookingService } from "src/app/core/services/booking.service";
 import { UserService } from "src/app/core/services/user.service";
 
@@ -8,6 +8,8 @@ import { UserService } from "src/app/core/services/user.service";
   styleUrls: ["./booking.component.scss"]
 })
 export class BookingComponent implements OnInit {
+  @ViewChild("comments") commentsValue;
+
   constructor(
     public userService: UserService,
     public bookingService: BookingService
@@ -31,8 +33,9 @@ export class BookingComponent implements OnInit {
     booking.units = booking.units + 1;
   }
 
-  updateOrder(idOrder) {
-    this.bookingService.updateOrder(idOrder).subscribe();
+  updateOrder(idOrder: number, units: number, comments: string) {
+    console.log("COMENTARIO: ", this.commentsValue.value);
+    this.bookingService.updateOrder(idOrder, units, comments).subscribe();
   }
 
   deleteOrder(idOrder) {

@@ -26,7 +26,7 @@ nav.main-menu.expanded {
     position: absolute;
     top: 0;
     bottom: 0;
-    height: 100vh;
+    min-height: 100%;
     left: 0;
     width: 60px;
     overflow: hidden;
@@ -131,6 +131,12 @@ nav.main-menu li.active>a,
     background: #fff;
     width: 180px;
     // height: 100%;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
 }
 
 // hr {

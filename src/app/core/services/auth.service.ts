@@ -16,7 +16,7 @@ export class AuthService {
   }
 
   login({ email, password }) {
-    console.log(this.authInfo); //muestro el token sin JWT
+    // console.log(this.authInfo); //muestro el token sin JWT
     return this.http
       .post(`${environment.apiBaseUrl}/account/login`, {
         email,

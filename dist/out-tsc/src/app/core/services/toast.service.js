@@ -1,49 +1,48 @@
 import * as tslib_1 from "tslib";
 import { Injectable } from "@angular/core";
-var ToastService = /** @class */ (function () {
+var ToastService = /** @class */ (function() {
     function ToastService() {
         this.toasts = [];
     }
-    ToastService.prototype.addToast = function (title, message, variant, delay) {
+    ToastService.prototype.addToast = function(title, message, variant, delay) {
         if (variant === void 0) { variant = "primary"; }
         if (delay === void 0) { delay = 5000; }
         this.toasts.unshift({
             title: title,
             message: message,
             variant: variant
-            // delay
+                // delay
         });
         if (delay) {
             this.delayAndRemove(delay);
         }
     };
-    ToastService.prototype.addErrorToast = function (error, delay) {
+    ToastService.prototype.addErrorToast = function(error, delay) {
         this.toasts.unshift({
             title: "Error",
-            message: error.message,
+            message: error && error.message || 'No error message',
             variant: "danger"
         });
         if (delay) {
             this.delayAndRemove(delay);
         }
     };
-    ToastService.prototype.isErrorToast = function (toast) {
+    ToastService.prototype.isErrorToast = function(toast) {
         if (toast.variant === "error") {
             return true;
         }
         return false;
     };
-    ToastService.prototype.delayAndRemove = function (milliseconds) {
+    ToastService.prototype.delayAndRemove = function(milliseconds) {
         var _this = this;
-        setTimeout(function () {
+        setTimeout(function() {
             _this.toasts.pop();
         }, milliseconds);
     };
-    ToastService.prototype.remove = function (index) {
+    ToastService.prototype.remove = function(index) {
         if (index) {
             this.toasts.splice(index, 1);
-        }
-        else {
+        } else {
             this.toasts.pop();
         }
     };

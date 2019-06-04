@@ -1,0 +1,17 @@
+h1 {
+    font-size: 10rem;
+    color: #fff;
+}
+
+a {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+        color: #000;
+        text-decoration: none;
+        // box-shadow: 0 0 10px 10px rgba(#000, 0.25);
+        // background-color: rgba(#000, 0.25);
+    }
+}

@@ -9,6 +9,8 @@ import { Booking } from "src/app/features/booking/booking.models";
 })
 export class BookingService {
   bookings: Booking[] = [];
+  comments: "";
+
   constructor(private http: HttpClient) {}
 
   getBookings(idUser) {
@@ -24,19 +26,34 @@ export class BookingService {
     return count;
   }
 
-  updateOrder(idOrder) {
-    return this.http.put(`${environment.apiBaseUrl}/order`, idOrder).pipe(
+  updateOrder(idOrder: number, units: number, comments: string) {
+    console.log("Comentariooooo: ", this.comments);
+    return this.http
+      .put(`${environment.apiBaseUrl}/order`, { idOrder, units, comments })
+      .pipe(
+        tap(() => {
+          this.bookings = this.bookings.filter(
+            booking => booking.idOrder !== idOrder
+          );
+        })
+      );
+  }
+
+  deleteOrder(idOrder: number) {
+    return this.http.delete(`${environment.apiBaseUrl}/order`).pipe(
       tap(() => {
-        this.bookings = {
-          ...this.bookings,
-          ...idOrder
-        };
+        this.bookings = this.bookings.filter(
+          booking => booking.idOrder !== idOrder
+        );
+        console.log("order eliminada: ", idOrder);
       })
     );
   }
 
-  deleteOrder(idOrder) {
-    return this.http.delete(`${environment.apiBaseUrl}/order`);
-    // .pipe(tap((booking: Booking) => (this.bookings = booking)));
-  }
+  // deleteOrder(idOrder) {
+  //   console.log(idOrder);
+  //   return this.http
+  //     .delete(`${environment.apiBaseUrl}/order`)
+  //     .pipe(tap((bookings: Booking[]) => (this.bookings = bookings)));
+  // }
 }

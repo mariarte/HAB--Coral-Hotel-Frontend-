@@ -4,7 +4,7 @@ import { Router } from "@angular/router";
 @Component({
   selector: "sn-footer",
   template: `
-    <nav class="navbar justify-content-center">
+    <nav class="navbar justify-content-center z-5000">
       <p>
         Creado con <i class="fa fa-heart"></i> por
         <span> © María Arteaga · </span>
