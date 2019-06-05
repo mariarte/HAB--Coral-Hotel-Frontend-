@@ -27,7 +27,7 @@ export class BookingService {
   }
 
   updateOrder(idOrder: number, units: number, comments: string) {
-    console.log("Comentariooooo: ", this.comments);
+    console.log("Comentariooooo: ", comments);
     return this.http
       .put(`${environment.apiBaseUrl}/order`, { idOrder, units, comments })
       .pipe(
@@ -40,7 +40,7 @@ export class BookingService {
   }
 
   deleteOrder(idOrder: number) {
-    return this.http.delete(`${environment.apiBaseUrl}/order`).pipe(
+    return this.http.delete(`${environment.apiBaseUrl}/order/${idOrder}`).pipe(
       tap(() => {
         this.bookings = this.bookings.filter(
           booking => booking.idOrder !== idOrder
@@ -49,11 +49,4 @@ export class BookingService {
       })
     );
   }
-
-  // deleteOrder(idOrder) {
-  //   console.log(idOrder);
-  //   return this.http
-  //     .delete(`${environment.apiBaseUrl}/order`)
-  //     .pipe(tap((bookings: Booking[]) => (this.bookings = bookings)));
-  // }
 }

@@ -4,8 +4,13 @@ import { Component } from "@angular/core";
   selector: "sn-header",
   template: `
     <nav class="navbar justify-content-center">
-      <p>
-        <i class="fas fa-h-square"></i>
+      <p routerLink="/welcome">
+        <img
+          class="icon"
+          src="../../../../assets/images/favicon.png"
+          alt="Coral Hotel Icon"
+        />
+        <!--<i class="fas fa-h-square"></i>-->
         The Coral Hotel
       </p>
     </nav>

@@ -1,6 +1,6 @@
 <div class="content container">
     <div class=" titles">
-        <i class=" far fa-grin-alt pr-1"></i>
+        <!-- <i class=" far fa-grin-alt pr-1"></i> -->
         <h1 class="pr-2">{{ title }} </h1>
         <h2>{{ presentation }}</h2>
         <h1>{{ name }}</h1>
@@ -25,33 +25,29 @@
         <img class="hab" src="../../../../assets/images/hab.png" alt="HAB Logo" />
     </div>
 
-    <div class="links mt-2">
+
+    <div class="social-buttons">
         <h2>{{ textLinks }}</h2>
-        <div class="links">
-            <button class="social " *ngFor="let link of links">
-        <a href="{{ link.URL }} ">
-          <i class="social {{ link.icon }} "></i>
-        </a>
-      </button>
+        <div *ngFor="let link of links">
+            <a href="{{ link.URL }} " class="{{link.class}}">
+                <span class="social-button__inner">
+                <i class="{{ link.icon }} "></i>
+                </span>
+            </a>
+
         </div>
     </div>
 
-    <!-- Social Icons -->
-    <!-- <ul class="list-inline py-2">
-        <li class="list-inline-item"><a class="p-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a></li>
-        <li class="list-inline-item"><a class="p-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a></li>
-        <li class="list-inline-item"><a class="p-2 fa-lg gplus-ic"><i class="fab fa-google-plus-g"></i></a></li>
-        <li class="list-inline-item"><a class="p-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a></li>
-    </ul> -->
-
     <hr />
 
-    <div class="emailBottom">
+    <div class="social-buttons">
         <h2>{{ contact.description }}</h2>
-        <button class="sendEmail">
-      <a href="mailto:{{ contact.email }}?Subject=Hola! ">
-        <i class=" email far fa-envelope "> </i>
-      </a>
-    </button>
+        <div>
+            <a href="mailto:{{ contact.email }}?Subject=Hola! " class="{{contact.class}}">
+                <span class="social-button__inner">
+                <i class=" {{contact.icon}} "> </i>
+                </span>
+            </a>
+        </div>
     </div>
 </div>

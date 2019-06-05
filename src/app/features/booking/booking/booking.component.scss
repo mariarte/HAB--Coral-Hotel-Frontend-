@@ -1,12 +1,21 @@
-$primary: hsl(222, 80%, 50%);
-$primary-light: hsl(222, 50%, 95%);
-$secondary: hsl(350, 80%, 50%);
-$red: hsl(10, 80%, 50%);
-$orange: hsl(50, 80%, 50%);
+// $primary: hsl(222, 80%, 50%);
+// $primary-light: hsl(222, 50%, 95%);
+// $secondary: hsl(350, 80%, 50%);
+// $red: hsl(10, 80%, 50%);
+// $orange: hsl(50, 80%, 50%);
 *,
 *:before,
 *:after {
     box-sizing: border-box;
+}
+
+// tr {
+//     border-color: #ff6f61;
+//     background-color: #fff;
+// }
+thead {
+    // color: #ff6f61;
+    font-size: 1.2rem;
 }
 
 .fa[class~="angle"] {

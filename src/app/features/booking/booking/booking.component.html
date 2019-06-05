@@ -1,4 +1,5 @@
-<h3 class="text-center mt-5">Compruebe las reservas y confirme, si lo desea:</h3>
+<h2 class="text-center mt-5">RESERVAS PENDIENTES DE CONFIRMAR</h2>
+<h5 class="text-center">Compruebe...confirme o elimine de su cuenta:</h5>
 <div>
     <table class="table table-striped p-4">
         <thead>
@@ -28,11 +29,14 @@
                     <span class="fa fa-angle-right angle" (click)="addQuantity(booking)"></span>
                 </td>
                 <td>{{ booking.price }}</td>
-                <td class="font-italic"><textarea #comments>{{ booking.comments }}</textarea></td>
+                <!-- <td class="font-italic"><textarea #comments>{{ booking.comments }}</textarea></td> -->
+                <td class="font-italic"><textarea (keyup)="updateBookingComments(booking, $event)">{{booking.comments}}</textarea></td>
                 <td>{{ booking.orderDate }}</td>
+                <!-- <td>{{ new Date(`${booking.orderDate}Z`).toLocaleString('es-ES')}}</td> -->
                 <td><i class="fas fa-check-circle" (click)="updateOrder(booking.idOrder, booking.units, booking.comments)"></i></td>
                 <td><i class="fas fa-trash-alt" (click)="deleteOrder(booking.idOrder)"></i></td>
             </tr>
+
         </tbody>
     </table>
 </div>

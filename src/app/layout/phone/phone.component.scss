@@ -1,0 +1,26 @@
+.button {
+    background: transparent;
+    &:before {
+        box-shadow: 0 0 10px 10px rgba(#ff6f61, 0.25);
+        background-color: rgba(#ff6f61, 0.25);
+    }
+}
+
+button.btn {
+    border: none;
+}
+
+.phone {
+    float: right;
+    font-size: 20px;
+    // left: -40px;
+    // top: -10px;
+}
+
+.fa-phone-volume {
+    font-size: 75px;
+    color: #000;
+    &:hover {
+        color: #ff6f61;
+    }
+}

@@ -13,6 +13,7 @@ import { SearchComponent } from "./search/search.component";
 import { BadgeComponent } from "./badge/badge.component";
 import { ClockComponent } from "./clock/clock.component";
 import { FormsModule } from "@angular/forms";
+import { PhoneComponent } from './phone/phone.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule } from "@angular/forms";
     ToastComponent,
     SearchComponent,
     BadgeComponent,
-    ClockComponent
+    ClockComponent,
+    PhoneComponent
   ],
   imports: [CommonModule, RouterModule, SharedModule, FormsModule],
   exports: [
