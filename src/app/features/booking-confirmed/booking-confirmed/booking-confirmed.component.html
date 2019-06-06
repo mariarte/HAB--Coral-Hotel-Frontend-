@@ -1,5 +1,9 @@
-<h2 class="text-center mt-5">RESERVAS CONFIRMADAS</h2>
-<div>
+<div *ngIf="bookingConfirmedService.bookings.length == 0">
+    <h2 class="text-center mt-5">NO TIENE RESERVAS CONFIRMADAS</h2>
+</div>
+
+<div *ngIf="bookingConfirmedService.bookings.length !== 0">
+    <h2 class="text-center mt-5">RESERVAS CONFIRMADAS</h2>
     <table class="table table-striped p-4">
         <thead>
             <tr>
@@ -18,11 +22,11 @@
                 <td>{{ booking.idOrder }}</td>
                 <!-- <th scope="row">{{ booking.idUser }}</th>-->
                 <td>{{ booking.idExperience }}</td>
-                <td>{{booking.title}}</td>
+                <td>{{ booking.title }}</td>
                 <td class="text-center">{{ booking.units }}</td>
                 <td>{{ booking.price }}</td>
                 <td class="font-italic">{{ booking.comments }}</td>
-                <td>{{ booking.confirmedAt.toLocaleString('es-ES') }}</td>
+                <td>{{ booking.confirmedAt.toLocaleString("es-ES") }}</td>
             </tr>
         </tbody>
     </table>

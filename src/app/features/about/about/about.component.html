@@ -1,23 +1,22 @@
 <div class="content container">
     <div class=" titles">
         <!-- <i class=" far fa-grin-alt pr-1"></i> -->
-        <h1 class="pr-2">{{ title }} </h1>
+        <h1 class="pr-2">{{ title }}</h1>
         <h2>{{ presentation }}</h2>
         <h1>{{ name }}</h1>
     </div>
 
     <div class="post-itdiv">
-        <!-- <img class="programmer_img" src="../../../../assets/images/logo_programadora.png" alt="Developer girl" /> -->
         <ul>
             <li>
                 <a>
-                    <h2>{{ descriptionTitle }}</h2>
+                    <h2 class="postit">{{ descriptionTitle }}</h2>
                     <p class="postit ">{{ description }}</p>
                 </a>
             </li>
             <li>
                 <a>
-                    <h2>{{ projectTitle }}</h2>
+                    <h2 class="postit">{{ projectTitle }}</h2>
                     <p class="postit ">{{ project }}</p>
                 </a>
             </li>
@@ -25,16 +24,14 @@
         <img class="hab" src="../../../../assets/images/hab.png" alt="HAB Logo" />
     </div>
 
-
     <div class="social-buttons">
         <h2>{{ textLinks }}</h2>
         <div *ngFor="let link of links">
-            <a href="{{ link.URL }} " class="{{link.class}}">
+            <a href="{{ link.URL }} " class="{{ link.class }}">
                 <span class="social-button__inner">
-                <i class="{{ link.icon }} "></i>
-                </span>
+          <i class="{{ link.icon }} "></i>
+        </span>
             </a>
-
         </div>
     </div>
 
@@ -43,11 +40,15 @@
     <div class="social-buttons">
         <h2>{{ contact.description }}</h2>
         <div>
-            <a href="mailto:{{ contact.email }}?Subject=Hola! " class="{{contact.class}}">
+            <a href="mailto:{{ contact.email }}?Subject=Hola! " class="{{ contact.class }}">
                 <span class="social-button__inner">
-                <i class=" {{contact.icon}} "> </i>
-                </span>
+          <i class=" {{ contact.icon }} "> </i>
+        </span>
             </a>
         </div>
+    </div>
+
+    <div class="programmer">
+        <img class="programmer_img" src="../../../../assets/images/logo_programadora.png" alt="Developer girl" />
     </div>
 </div>

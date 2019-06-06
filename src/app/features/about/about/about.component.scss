@@ -30,20 +30,19 @@ div.titles {
     justify-content: center;
 }
 
-// div.programmer {
-//     position: relative;
-//     top: 80px;
-//     left: 120px;
-//     width: 50px;
-//     z-index: 1;
-// }
+div.programmer {
+    position: relative;
+    top: -290px;
+    left: 55px;
+    z-index: 1;
+}
+
 div.post-itdiv {
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    // flex-basis: 50%;
     margin: 0;
     padding: 0;
     // z-index: 999;
@@ -51,33 +50,14 @@ div.post-itdiv {
     // height: 350px;
 }
 
-// div.links {
-//     position: relative;
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     justify-content: center;
-//     // top: 300px;
-//     // left: 120px;
-// }
 h1 {
     font-size: 3rem;
     font-weight: bolder;
 }
 
 h2 {
-    // margin: 10px 0;
+    margin: 28px;
     font-size: 28px;
-}
-
-p {
-    margin: 10px 0;
-}
-
-a {
-    font-size: 1.2rem;
-    // margin: 10px 0;
-    // font-weight: bolder;
 }
 
 // icono carita grande
@@ -94,8 +74,9 @@ li {
 }
 
 ul {
-    overflow: hidden;
-    // margin: 0px 15px;
+    // overflow: hidden;
+    padding-left: 105px;
+    margin-bottom: 60px;
     // padding: 3em;
 }
 
@@ -104,9 +85,9 @@ ul li a {
     color: #000;
     background: #ffe4e2;
     display: block;
-    height: 12em;
-    width: 12em;
-    padding: 1em;
+    height: 13em;
+    width: 13em;
+    // padding: 0.2em;
     /* Firefox */
     -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
     /* Safari+Chrome */
@@ -131,57 +112,63 @@ ul li a:focus {
     -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
     -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
     box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -o-transform: scale(1.5);
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    -o-transform: scale(1.7);
     position: relative;
     z-index: 5;
 }
 
 ul li {
-    margin: 1.5em;
+    margin: 0 1.5em;
     float: left;
 }
 
 ul li h2 {
     font-family: "Montserrat", arial, sans-se;
-    font-size: 30px;
-    // font-weight: bold;
+    font-size: 25px;
     text-align: center;
-    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 p.postit {
     font-family: "Reenie Beanie", arial, sans-se;
-    font-size: 20px;
+    font-size: 22px;
+    margin: 0;
+    padding: 0 18px 18px 18px;
 }
 
 img.programmer_img {
-    width: 25%;
-    height: 25%;
+    width: 20%;
+    height: 20%;
     margin: 0;
     padding: 0;
-    // -o-transform: rotate(4deg);
-    // -webkit-transform: rotate(4deg);
-    // -moz-transform: rotate(4deg);
-    position: relative;
-    top: 115px;
-    left: 140px;
-    z-index: 1;
+    // -o-transform: rotate(-4deg);
+    // -webkit-transform: rotate(-4deg);
+    // -moz-transform: rotate(-4deg);
+    // position: relative;
+    // top: 115px;
+    // left: 140px;
+    // z-index: 1;
 }
 
 img.hab {
-    width: 15%;
-    height: 15%;
+    width: 12%;
+    height: 12%;
     margin: 0;
     padding: 0;
     -o-transform: rotate(-7deg);
     -webkit-transform: rotate(-7deg);
     -moz-transform: rotate(-7deg);
     position: relative;
-    top: 110px;
-    left: -180px;
+    top: 100px;
+    left: -135px;
     z-index: 1;
+}
+
+hr {
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -210,7 +197,7 @@ $social-button-colors: ( "mail": #0072c6,
 "github": #6e5494,
 "codepen": #212121,
 "steam": #7da10e,
-"snapchat":#eec900,
+"snapchat": #eec900,
 "twitter": #55acee,
 "instagram": #e4405f,
 "email": #ff6f61);
