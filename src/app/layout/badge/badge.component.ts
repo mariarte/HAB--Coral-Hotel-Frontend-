@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, HostListener } from "@angular/core";
 import { OrderService } from "src/app/core/services/order.service";
 import { BookingService } from "src/app/core/services/booking.service";
 import { UserService } from "src/app/core/services/user.service";
@@ -16,9 +16,7 @@ export class BadgeComponent implements OnInit {
     public bookingService: BookingService
   ) {}
 
-  ngOnInit() {
-    // this.bookingService.getOrderCount();
-  }
+  ngOnInit() {}
 
   getBookings(idUser) {
     this.bookingService // muestra TODAS las order en la cesta

@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { BookingService } from "src/app/core/services/booking.service";
 import { UserService } from "src/app/core/services/user.service";
 import { ToastService } from "src/app/core/services/toast.service";
+import { text } from "@angular/core/src/render3";
 
 @Component({
   selector: "sn-booking",
@@ -38,16 +39,14 @@ export class BookingComponent implements OnInit {
   // captura el event.target.value, que es el valor del textarea y se lo pone al booking que tengo
   updateBookingComments(booking, event) {
     const textareaValue = event.target.value;
-    if (textareaValue != "") {
-      // si el usuario no introduce nada lo envio vacio...asi no muestra null
-      booking.comments = textareaValue;
-    } else {
-      booking.comments = "";
-    }
+    booking.comments = textareaValue;
   }
 
   updateOrder(idOrder: number, units: number, comments: string) {
-    // console.log("COMENTARIO: ", comments);
+    console.log("COMENTARIO: ", comments);
+    if (comments === null) {
+      comments = "";
+    }
     this.bookingService.updateOrder(idOrder, units, comments).subscribe(() => {
       this.toastService.addToast(
         "RESERVA CONFIRMADA",
@@ -57,6 +56,7 @@ export class BookingComponent implements OnInit {
     // ***********************
     //* *********************
     // INCLUIR EMAIL A USUARIO Y A RECEPCION
+    console.log("COMENTARIO 2: ", comments);
   }
 
   deleteOrder(idOrder) {

@@ -15,7 +15,7 @@ import { UserService } from "src/app/core/services/user.service";
 })
 export class NavComponent implements OnInit {
   sticky = false;
-  menuPosition = 106;
+  asidePosition = 106;
 
   constructor(
     public authService: AuthService,
@@ -28,7 +28,7 @@ export class NavComponent implements OnInit {
   handleScroll() {
     const windowScroll = window.pageYOffset;
     // console.log({ windowScroll, menuPosition: this.menuPosition });
-    if (windowScroll >= this.menuPosition) {
+    if (windowScroll >= this.asidePosition) {
       this.sticky = true;
     } else {
       this.sticky = false;

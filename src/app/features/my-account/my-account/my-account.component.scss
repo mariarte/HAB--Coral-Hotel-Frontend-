@@ -1,10 +1,14 @@
 .content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-content: center;
+    width: 70%;
 }
 
-div.form_data {
-    width: 70%;
+div.form_butt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 input.email-not-modif {

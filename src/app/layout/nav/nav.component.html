@@ -1,10 +1,10 @@
 <div class="area">
-
-    <nav class="main-menu" [class.sticky]='sticky'>
+    <nav class="main-menu" [class.sticky]="sticky">
         <ul>
             <li class="has-subnav">
                 <a>
-                    <i class="far fa-smile fa-2x"></i>
+                    <!-- <i class="far fa-smile fa-2x"></i> -->
+                    <div class="author"><img src="https://randomuser.me/api/portraits/men/95.jpg" /></div>
                     <span class="nav-text">Bienvenid@ {{ userService.currentUser?.fullName }}</span
           >
         </a>

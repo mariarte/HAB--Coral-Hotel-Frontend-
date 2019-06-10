@@ -6,7 +6,7 @@ var ToastService = /** @class */ (function() {
     }
     ToastService.prototype.addToast = function(title, message, variant, delay) {
         if (variant === void 0) { variant = "primary"; }
-        if (delay === void 0) { delay = 5000; }
+        if (delay === void 0) { delay = 6000; }
         this.toasts.unshift({
             title: title,
             message: message,

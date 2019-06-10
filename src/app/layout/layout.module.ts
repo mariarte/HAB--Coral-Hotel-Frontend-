@@ -13,7 +13,8 @@ import { SearchComponent } from "./search/search.component";
 import { BadgeComponent } from "./badge/badge.component";
 import { ClockComponent } from "./clock/clock.component";
 import { FormsModule } from "@angular/forms";
-import { PhoneComponent } from './phone/phone.component';
+import { PhoneComponent } from "./phone/phone.component";
+import { CardBookingComponent } from "./card-booking/card-booking.component";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PhoneComponent } from './phone/phone.component';
     SearchComponent,
     BadgeComponent,
     ClockComponent,
-    PhoneComponent
+    PhoneComponent,
+    CardBookingComponent
   ],
   imports: [CommonModule, RouterModule, SharedModule, FormsModule],
   exports: [
@@ -38,7 +40,8 @@ import { PhoneComponent } from './phone/phone.component';
     ToastComponent,
     CardComponent,
     SearchComponent,
-    BadgeComponent
+    BadgeComponent,
+    CardBookingComponent
   ]
 })
 export class LayoutModule {}

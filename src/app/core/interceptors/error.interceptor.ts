@@ -36,7 +36,7 @@ export class ErrorInterceptor implements HttpInterceptor {
           //   error.error.details.forEach(error => {
           //     this.toastService.addErrorToast(error, 5000);
           //   });
-          this.toastService.addErrorToast(error.error[0], 5000);
+          this.toastService.addErrorToast(error.error[0], 6000);
         }
 
         return throwError(error);

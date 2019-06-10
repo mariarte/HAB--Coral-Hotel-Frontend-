@@ -14,6 +14,7 @@ export class BookingConfirmedComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.bookingConfirmedService.bookings = [];
     this.bookingConfirmedService // carga las order CONFIRMADAS
       .getBookingsConfirmed(this.userService.currentUser.idUser)
       .subscribe();

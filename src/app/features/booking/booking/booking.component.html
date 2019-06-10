@@ -1,14 +1,22 @@
-<div *ngIf="bookingService.bookings.length == 0">
-    <h2 class="text-center mt-5">NO TIENE RESERVAS PENDIENTES PARA CONFIRMAR</h2>
+<div class="container" *ngIf="bookingService.bookings.length == 0">
+    <h3 class="text-center mt-5">NO TIENE RESERVAS PENDIENTES PARA CONFIRMAR</h3>
+    <p class="w-75 mt-4 text-center">Cuando haya elegido su experiencia, haga click en "Seleccionar" para añadir antes de confirmar definitivamente</p>
+    <i class="cesta fa fa-shopping-cart m-5"></i>
+    <button routerLink="/private-area"><i class="fa fa-table"></i> Experiencias</button>
 </div>
+
+<!-- <sn-card-booking></sn-card-booking> -->
 
 <div *ngIf="bookingService.bookings.length !== 0">
     <h2 class="text-center mt-5">RESERVAS PENDIENTES DE CONFIRMAR</h2>
     <h5 class="text-center">Compruebe...confirme o elimine de su cuenta:</h5>
+
+
+
     <table class="table table-striped p-4">
         <thead>
             <tr>
-                <th scope="col">Id. Order</th>
+                <!-- <th scope="col">Id. Order</th> -->
                 <!-- 
                 <th scope="col">Id. Usuario</th>
                 <th scope="col">Id. Experiencia</th> -->
@@ -23,7 +31,7 @@
         </thead>
         <tbody *ngFor="let booking of bookingService.bookings">
             <tr>
-                <td>{{ booking.idOrder }}</td>
+                <!-- <td>{{ booking.idOrder }}</td> -->
                 <!-- <th scope="row">{{ booking.idUser }}</th>
                 <td>{{ booking.idExperience }}</td> -->
                 <td>{{ booking.title }}</td>
@@ -39,8 +47,7 @@
             booking.comments
           }}</textarea>
                 </td>
-                <td>{{ booking.orderDate }}</td>
-                <!-- <td>{{ new Date(`${booking.orderDate}Z`).toLocaleString('es-ES')}}</td> -->
+                <td>{{ booking.orderDate | date:' dd-MMM-yyyy - HH:mm:ss ' : 'navigator.languaje' }}</td>
                 <td>
                     <i class="fas fa-check-circle" (click)="
               updateOrder(booking.idOrder, booking.units, booking.comments)

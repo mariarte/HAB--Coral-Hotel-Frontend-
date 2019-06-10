@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="form_data">
+    <div class="form_data align-content-center">
         <form class="p-5" [formGroup]="updateProfileForm" [snMarkAsTouched]="updateProfileForm">
             <div class="form-group">
                 <label>Nombre</label>
@@ -13,9 +13,13 @@
             </div>
         </form>
     </div>
-
-    <div class="form_butt p-5 mt-4">
-        <button (click)="updateProfile()" class="m-2" type="submit"><i class="far fa-save"></i> Actualizar</button>
-        <button (click)="deleteProfile()" class="m-2" type="submit"><i class="far fa-trash-alt"></i> Borrar user</button>
+    <div class="pt-2 form_butt">
+        <div>
+            <button (click)="updateProfile()" class="m-2" type="submit"><i class="far fa-save"></i> Actualizar</button>
+        </div>
+        <!-- Se permite borrar al usuario si no tiene reservas pendientes ni reservas procesadas -->
+        <div *ngIf="bookingService.bookings.length == 0 && bookingConfirmedService.bookings.length == 0">
+            <button (click)="deleteProfile()" class="m-2" type="submit"><i class="far fa-trash-alt"></i> Borrar user</button>
+        </div>
     </div>
 </div>

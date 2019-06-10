@@ -1,19 +1,21 @@
-<div class="jumbotron jumbotron-fluid bg-primary h-100">
-    <div class="container text-center">
-        <h1 class="display-1">404</h1>
-        <ul class="list-inline mt-5">
-            <li class="lead list-inline-item mx-3">
-                <a routerLink="/private-area">Mi área privada</a>
-            </li>
-            <li class="lead list-inline-item mx-3">
-                <a routerLink="/welcome">Login</a>
-            </li>
-            <li class="lead list-inline-item mx-3">
-                <a routerLink="/welcome">Register</a>
-            </li>
-            <li class="lead list-inline-item mx-3">
-                <a routerLink="/about">About</a>
-            </li>
-        </ul>
+<div class="bg-white h-100">
+    <div class="container text-center mt-3 mb-5">
+        <img src="../../../../assets/images/404.png" alt="404 image" />
     </div>
+    <div class="buttons mb-2">
+        <div class="but" routerLink="/private-area">
+            <i class="fas fa-user-lock"></i>
+            <button class="m-2"> Mi área privada</button>
+        </div>
+        <div class="but" routerLink="/welcome">
+            <i class="fas fa-sign-in-alt"></i>
+            <button class="m-2"> Login / Register</button>
+        </div>
+        <div class="but" routerLink="/about">
+            <i class="fas fa-user-circle"></i>
+            <button class="m-2"> About</button>
+        </div>
+    </div>
+
+
 </div>

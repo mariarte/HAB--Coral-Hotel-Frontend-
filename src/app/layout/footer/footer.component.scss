@@ -1,7 +1,7 @@
 nav {
     background-color: #212121;
     color: #fff;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 nav p {
@@ -16,7 +16,13 @@ nav span {
 
 nav a {
     /*color de link del footer*/
-    color: #3c97bf;
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+nav a:hover {
+    /*color de link del footer*/
+    color: #fff;
     text-decoration: none;
 }
 

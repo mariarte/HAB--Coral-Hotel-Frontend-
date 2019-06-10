@@ -13,10 +13,20 @@ export class BookingService {
 
   constructor(private http: HttpClient) {}
 
+  private convertToLocaleDate(booking: Booking) {
+    booking.orderDate = new Date(booking.orderDate.toLocaleString());
+    return booking;
+  }
+
   getBookings(idUser) {
     return this.http
       .get(`${environment.apiBaseUrl}/order`)
-      .pipe(tap((bookings: Booking[]) => (this.bookings = bookings)));
+      .pipe(
+        tap(
+          (bookings: Booking[]) =>
+            (this.bookings = bookings.map(this.convertToLocaleDate))
+        )
+      );
   }
 
   getOrderCount() {

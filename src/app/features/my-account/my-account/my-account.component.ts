@@ -4,6 +4,8 @@ import { Router } from "@angular/router";
 import { UserService } from "src/app/core/services/user.service";
 import { ToastService } from "src/app/core/services/toast.service";
 import { ModalService } from "src/app/core/services/modal.service";
+import { BookingService } from "src/app/core/services/booking.service";
+import { BookingConfirmedService } from "src/app/core/services/booking-confirmed.service";
 
 @Component({
   selector: "sn-my-account",
@@ -21,7 +23,9 @@ export class MyAccountComponent implements OnInit {
     private router: Router,
     private userService: UserService,
     private toastService: ToastService,
-    private modalService: ModalService
+    private modalService: ModalService,
+    public bookingService: BookingService,
+    public bookingConfirmedService: BookingConfirmedService
   ) {}
 
   ngOnInit() {

@@ -11,7 +11,7 @@ export class ToastService {
     title: string,
     message: string,
     variant: string = "primary",
-    delay: number = 5000
+    delay: number = 6000
   ) {
     this.toasts.unshift({
       title,
