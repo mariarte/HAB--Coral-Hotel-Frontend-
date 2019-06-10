@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiBaseUrl: "http://localhost:3000/api"
-  // apiBaseUrl: "coralhotel.mysql.database.azure.com"
+  // apiBaseUrl: "https://git.heroku.com/coralhotel.git"
 };
 
 /*
