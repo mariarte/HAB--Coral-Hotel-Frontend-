@@ -1,35 +1,23 @@
-<div *ngIf="bookingConfirmedService.bookings.length == 0">
-    <h2 class="text-center mt-5">NO TIENE RESERVAS CONFIRMADAS</h2>
-
-    <img src="../../../../assets/images/cinemagraph.gif" alt="404 image" />
+<div class="conta_null" *ngIf="bookingConfirmedService.bookings.length == 0">
+    <h3 class="text-center mt-5">NO TIENE RESERVAS CONFIRMADAS</h3>
+    <p class="text-center w-75 mt-4">Cuando haya elegido su experiencia, haga click en "Seleccionar" para añadir a su cesta antes de confirmar definitivamente</p>
+    <i class="cesta fa fa-shopping-cart m-5"></i>
+    <button routerLink="/private-area"><i class="fa fa-table"></i> Experiencias</button>
 </div>
 
-<div *ngIf="bookingConfirmedService.bookings.length !== 0">
+<div class="container" *ngIf="bookingConfirmedService.bookings.length !== 0">
     <h2 class="text-center mt-5">RESERVAS CONFIRMADAS</h2>
-    <table class="table table-striped p-4">
-        <thead>
-            <tr>
-                <!-- <th scope="col">Id. Order</th> -->
-                <!-- <th scope="col">Id. Usuario</th>-->
-                <!-- <th scope="col">Id. Experiencia</th> -->
-                <th scope="col">Descripción</th>
-                <th scope="col">Unidades</th>
-                <th scope="col">Precio</th>
-                <th scope="col">Comentarios</th>
-                <th scope="col">Fecha de confirmación</th>
-            </tr>
-        </thead>
-        <tbody *ngFor="let booking of bookingConfirmedService.bookings">
-            <tr>
-                <!-- <td>{{ booking.idOrder }}</td> -->
-                <!-- <th scope="row">{{ booking.idUser }}</th>-->
-                <!-- <td>{{ booking.idExperience }}</td> -->
-                <td>{{ booking.title }}</td>
-                <td class="text-center">{{ booking.units }}</td>
-                <td>{{ booking.price }}</td>
-                <td class="font-italic">{{ booking.comments }}</td>
-                <td>{{ booking.confirmedAt | date:' dd-MMM-yyyy - HH:mm:ss ' : 'navigator.languaje' }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="card p-2 m-3" *ngFor="let booking of bookingConfirmedService.bookings">
+        <div class="title">
+            <h1>{{booking.title}}</h1>
+            <p class="p_comments pl-4 mx-auto" *ngIf="booking.comments !== '' ">"{{booking.comments}}"<i class="fas fa-comment-dots"></i></p>
+        </div>
+        <div class="dates">
+            <ul>
+                <li>{{booking.units}}<i class="fas fa-users"></i></li>
+                <li>{{booking.price}} €<i class="fas fa-euro-sign"></i></li>
+                <li>{{booking.confirmedAt | date:' dd-MMM-yyyy - HH:mm:ss ' : 'navigator.languaje' }}<i class="far fa-calendar-alt"></i></li>
+            </ul>
+        </div>
+    </div>
 </div>
