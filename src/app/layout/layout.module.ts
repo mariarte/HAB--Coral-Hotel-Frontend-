@@ -14,7 +14,6 @@ import { BadgeComponent } from "./badge/badge.component";
 import { ClockComponent } from "./clock/clock.component";
 import { FormsModule } from "@angular/forms";
 import { PhoneComponent } from "./phone/phone.component";
-import { CardBookingComponent } from "./card-booking/card-booking.component";
 
 @NgModule({
   declarations: [
@@ -28,8 +27,7 @@ import { CardBookingComponent } from "./card-booking/card-booking.component";
     SearchComponent,
     BadgeComponent,
     ClockComponent,
-    PhoneComponent,
-    CardBookingComponent
+    PhoneComponent
   ],
   imports: [CommonModule, RouterModule, SharedModule, FormsModule],
   exports: [
@@ -40,8 +38,7 @@ import { CardBookingComponent } from "./card-booking/card-booking.component";
     ToastComponent,
     CardComponent,
     SearchComponent,
-    BadgeComponent,
-    CardBookingComponent
+    BadgeComponent
   ]
 })
 export class LayoutModule {}
