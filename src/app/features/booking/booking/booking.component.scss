@@ -4,9 +4,58 @@
     box-sizing: border-box;
 }
 
-thead {
-    // color: #ff6f61;
-    font-size: 1.2rem;
+.container {
+    width: 90%;
+    margin: 15px auto;
+    align-content: center;
+}
+
+.card {
+    // width: 80%;
+    // height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    background: #ff6f61;
+    box-shadow: 0 12px 15px 0 rgba(128, 128, 128, .7), 0 17px 17px 0 rgba(128, 128, 128, .5);
+}
+
+.title {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dates {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.but_rounded {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    padding: 0 1%;
+}
+
+li {
+    margin: 1%;
+    padding: 2px 2px 2px 24px;
+    border: 2px solid #ff6f61;
+    border-radius: 4px;
+    position: relative;
+    text-align: left;
+    color: #000;
+    background: #fff;
 }
 
 .fa[class~="angle"] {
@@ -15,53 +64,93 @@ thead {
     top: 0.15rem;
     margin: 0 20px;
     cursor: pointer;
-    color: rgb(216, 216, 216);
+    color: rgb(156, 156, 156);
     transition: all 0.5s;
     &:hover {
         color: #ff6f61;
     }
 }
 
+.price,
+.date {
+    cursor: not-allowed;
+}
+
+.far,
 .fas {
-    font-size: 1.8rem;
+    position: absolute;
+    top: -1px;
+    left: -10px;
+    width: 30px;
+    height: 30px;
+    background: #ff6f61;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.fa-comment-dots {
+    position: absolute;
+    top: 54px;
+    left: 15px;
+    // border: #000 1px solid;
 }
 
 .fa-check-circle {
-    color: #33CC00;
+    position: relative;
+    font-size: 1.8rem;
+    cursor: pointer;
     &:hover {
-        color: #006600;
+        color: #33CC00;
     }
 }
 
 .fa-trash-alt {
-    color: red;
+    position: relative;
+    font-size: 1.8rem;
+    cursor: pointer;
     &:hover {
-        color: #990000;
+        color: red;
     }
+}
+
+h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
 }
 
 textarea {
     display: block;
     resize: none;
-    width: 100%;
-    // height: calc(1.5em + 0.75rem + 6px);
+    height: 50%;
+    width: 80%;
+    cursor: text;
     padding: 0.375rem 0.75rem;
-    font-size: 0.8rem;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.5;
-    color: #495057;
+    padding: 2px;
+    margin: 8px;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: #000;
     background-color: #fff;
-    background-clip: padding-box;
-    border: 3px solid #ced4da;
+    border: none;
     border-radius: 0.25rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.container {
+.conta_null {
+    width: 70%;
+    margin: 15px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70%;
 }
 
 .cesta {

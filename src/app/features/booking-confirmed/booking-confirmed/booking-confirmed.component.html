@@ -1,11 +1,11 @@
-<div class="conta_null" *ngIf="bookingConfirmedService.bookings.length == 0">
+<div class="conta_null animated fadeIn" *ngIf="bookingConfirmedService.bookings.length == 0">
     <h3 class="text-center mt-5">NO TIENE RESERVAS CONFIRMADAS</h3>
     <p class="text-center w-75 mt-4">Cuando haya elegido su experiencia, haga click en "Seleccionar" para añadir a su cesta antes de confirmar definitivamente</p>
     <i class="cesta fa fa-shopping-cart m-5"></i>
     <button routerLink="/private-area"><i class="fa fa-table"></i> Experiencias</button>
 </div>
 
-<div class="container" *ngIf="bookingConfirmedService.bookings.length !== 0">
+<div class="container animated fadeIn" *ngIf="bookingConfirmedService.bookings.length !== 0">
     <h2 class="text-center mt-5">RESERVAS CONFIRMADAS</h2>
     <div class="card p-2 m-3" *ngFor="let booking of bookingConfirmedService.bookings">
         <div class="title">

@@ -79,7 +79,7 @@ export class WelcomeComponents {
           "Gracias por tu registro!!",
           "Te hemos enviado un email con la confirmación. Será donde recibas las comunicaciones sobre tus experiencias"
         );
-        // this.router.navigate(["/private-area"]);
+        this.router.navigate(["/private-area"]);
       });
     }
   }

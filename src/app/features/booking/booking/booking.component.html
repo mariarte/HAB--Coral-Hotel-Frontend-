@@ -1,4 +1,4 @@
-<div class="container" *ngIf="bookingService.bookings.length == 0">
+<div class="conta_null animated fadeIn" *ngIf="bookingService.bookings.length == 0">
     <h3 class="text-center mt-5">NO TIENE RESERVAS PENDIENTES PARA CONFIRMAR</h3>
     <p class="w-75 mt-4 text-center">Cuando haya elegido su experiencia, haga click en "Seleccionar" para añadir antes de confirmar definitivamente</p>
     <i class="cesta fa fa-shopping-cart m-5"></i>
@@ -6,55 +6,33 @@
 </div>
 
 
-<div *ngIf="bookingService.bookings.length !== 0">
+<div class="container animated fadeIn" *ngIf="bookingService.bookings.length !== 0">
     <h2 class="text-center mt-5">RESERVAS PENDIENTES DE CONFIRMAR</h2>
     <h5 class="text-center">Compruebe...confirme o elimine de su cuenta:</h5>
 
-
-    <table class="table table-striped p-4">
-        <thead>
-            <tr>
-                <!-- <th scope="col">Id. Order</th> -->
-                <!-- 
-                <th scope="col">Id. Usuario</th>
-                <th scope="col">Id. Experiencia</th> -->
-                <th scope="col">Descripción</th>
-                <th scope="col">Unidades</th>
-                <th scope="col">Precio</th>
-                <th scope="col">Comentarios</th>
-                <th scope="col">Fecha</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-            </tr>
-        </thead>
-        <tbody *ngFor="let booking of bookingService.bookings">
-            <tr>
-                <!-- <td>{{ booking.idOrder }}</td> -->
-                <!-- <th scope="row">{{ booking.idUser }}</th>
-                <td>{{ booking.idExperience }}</td> -->
-                <td>{{ booking.title }}</td>
-                <td class="text-center">
+    <div class="card mt-3" *ngFor="let booking of bookingService.bookings">
+        <div class="title">
+            <h1>{{booking.title}}</h1>
+            <i class="fas fa-comment-dots"></i>
+            <textarea class="p_comments pl-4 mx-auto" *ngIf="booking.comments !== '' " (keyup)="updateBookingComments(booking, $event)">{{
+                booking.comments
+              }}</textarea>
+        </div>
+        <div class="dates">
+            <ul>
+                <li>
                     <span class="fa fa-angle-left angle" (click)="substractQuantity(booking)"></span>
                     <span id="qt">{{ booking.units }}</span>
                     <span class="fa fa-angle-right angle" (click)="addQuantity(booking)"></span>
-                </td>
-                <td>{{ booking.price }}</td>
-                <!-- <td class="font-italic"><textarea #comments>{{ booking.comments }}</textarea></td> -->
-                <td class="font-italic">
-                    <textarea (keyup)="updateBookingComments(booking, $event)">{{
-            booking.comments
-          }}</textarea>
-                </td>
-                <td>{{ booking.orderDate | date:' dd-MMM-yyyy - HH:mm:ss ' : 'navigator.languaje' }}</td>
-                <td>
-                    <i class="fas fa-check-circle" (click)="
-              updateOrder(booking.idOrder, booking.units, booking.comments)
-            "></i>
-                </td>
-                <td>
-                    <i class="fas fa-trash-alt" (click)="deleteOrder(booking.idOrder)"></i>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                    <i class="fas fa-users"></i>
+                </li>
+                <li class="price pl-5">{{booking.price}} €<i class="fas fa-euro-sign"></i></li>
+                <li class="date pl-5">{{booking.orderDate | date:' dd-MMM-yyyy - HH:mm:ss ' : 'navigator.languaje' }}<i class="far fa-calendar-alt"></i></li>
+            </ul>
+        </div>
+        <div class="but_rounded">
+            <i class="fas fa-check-circle mb-2 ml-2" (click)="updateOrder(booking.idOrder, booking.units, booking.comments)"></i>
+            <i class="fas fa-trash-alt mt-2 ml-2" (click)="deleteOrder(booking.idOrder)"></i>
+        </div>
+    </div>
 </div>
