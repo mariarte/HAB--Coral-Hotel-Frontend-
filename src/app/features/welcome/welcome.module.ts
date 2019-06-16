@@ -8,7 +8,7 @@ import { SharedModule } from "src/app/shared/shared.module";
 const routes: Routes = [
   {
     path: "",
-    component: WelcomeComponents // apunta al WelcomeComponents
+    component: WelcomeComponents
   }
 ];
 

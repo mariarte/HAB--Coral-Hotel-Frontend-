@@ -12,6 +12,10 @@ export class PrivateAreaService {
 
   constructor(private http: HttpClient) {}
 
+  /**
+   * Función que muestra las experiences
+   * @return {Object} experience
+   */
   getExperiences() {
     return this.http.get(`${environment.apiBaseUrl}/experiences`).pipe(
       tap(
@@ -24,6 +28,11 @@ export class PrivateAreaService {
     );
   }
 
+  /**
+   * Función que busca las experiences dependiendo de un texto pasado
+   * @param {String} experience
+   * @return {Object} experience
+   */
   search(experience: string) {
     return this.http
       .get(`${environment.apiBaseUrl}/experiences/${experience}`)

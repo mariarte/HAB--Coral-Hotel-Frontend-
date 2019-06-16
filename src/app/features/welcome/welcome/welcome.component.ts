@@ -5,7 +5,6 @@ import { AuthService } from "src/app/core/services/auth.service";
 import { UserService } from "src/app/core/services/user.service";
 import { ModalService } from "src/app/core/services/modal.service";
 import { BookingService } from "src/app/core/services/booking.service";
-
 import { MailValidator } from "../../../shared/validators/mail.validator";
 import { MatchPasswordValidator } from "../../../shared/validators/match-password.validator";
 
@@ -39,25 +38,30 @@ export class WelcomeComponents {
     private bookingService: BookingService
   ) {}
 
-  // Muestra el formulario de Registro
+  /**
+   * Muestra el formulario de Registro en el inicio (deslizando los paneles)
+   */
   showRegister() {
     const container = document.getElementById("container");
     container.classList.add("right-panel-active");
   }
 
-  // Muestra el formulario de Login
+  /**
+   * Muestra el formulario de Login en inicio (deslizando los paneles)
+   */
   showLogin() {
     const container = document.getElementById("container");
     container.classList.remove("right-panel-active");
   }
 
-  // Llamada al back en el LOGIN
+  /**
+   * Petición al back para el LOGIN
+   */
   login() {
     if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value).subscribe(
         () => {
           this.userService.getUserProfile().subscribe();
-          console.log(this.authService, this.userService);
           this.router.navigate(["/private-area"]);
           this.bookingService
             .getBookings(this.userService.getUserProfile())
@@ -68,10 +72,11 @@ export class WelcomeComponents {
     }
   }
 
-  // Llamada al back en el REGISTRO
+  /**
+   * Petición al back para el REGISTER
+   */
   register() {
     const { fullName, email, password } = this.registerForm.value;
-
     if (this.registerForm.valid) {
       this.authService.register({ fullName, email, password }).subscribe(() => {
         this.registerForm.reset();

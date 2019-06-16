@@ -10,7 +10,6 @@ import { Component } from "@angular/core";
         alt="Coral Hotel Icon"
       />
       <p>
-        <!--<i class="fas fa-h-square"></i>-->
         The Coral Hotel
       </p>
     </nav>

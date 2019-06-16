@@ -10,12 +10,20 @@ export class ModalService {
 
   content: "";
 
+  /**
+   * Función que abre una notificación modal
+   * @param {String} title
+   * @param {String} content
+   */
   open(title, content) {
     this.opened = true;
     this.title = title;
     this.content = content;
   }
 
+  /**
+   * Función que cierra una notificación modal
+   */
   close() {
     this.opened = false;
   }

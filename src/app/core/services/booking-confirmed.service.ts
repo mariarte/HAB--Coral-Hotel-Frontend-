@@ -11,6 +11,10 @@ export class BookingConfirmedService {
   bookings: Booking[];
   constructor(private http: HttpClient) {}
 
+  /**
+   * Función que muestra todas las booking (confirmadas) de un usuario
+   * @param {Number} idUser
+   */
   getBookingsConfirmed(idUser) {
     return this.http
       .get(`${environment.apiBaseUrl}/order/confirmed`)

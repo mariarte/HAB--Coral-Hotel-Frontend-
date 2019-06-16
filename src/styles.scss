@@ -3,25 +3,6 @@
 
 /*! `Custom` Bootstrap 4 theme */
 
-// @import url('https://fonts.googleapis.com/css?family=Bungee+Shade:200,300,400,700'); // poner las comillas
-// $headings-font-family:Bungee Shade;
-// $enable-grid-classes:true; // poner a true manualmente
-// $primary:#563d7c;
-// $secondary:#868e96;
-// $success:#28a745;
-// $danger:#dc3545;
-// $info:#17a2b8;
-// $warning:#ffc107;
-// $light:#f8f9fa;
-// $dark:#343434;
-// $enable-gradients:true;
-// $spacer:1rem;
-// $border-width:1px;
-// $btn-border-radius:.25rem;
-// quitar el import de aqui
-
-/*! `Custom` Bootstrap 4 theme */
-
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 $headings-font-family: Montserrat;
 $primary: #ff6f61;
@@ -54,7 +35,7 @@ $enable-responsive-font-sizes: true;
 }
 
 
-/** Animaciones entre paginas **/
+/* Animaciones entre paginas */
 
 .animated {
     animation-duration: 1.5s;
@@ -77,6 +58,9 @@ $enable-responsive-font-sizes: true;
 a {
     cursor: pointer !important;
 }
+
+
+/* Estilos de botones */
 
 button {
     $height: 40px;

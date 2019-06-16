@@ -19,7 +19,6 @@ export class SearchComponent implements OnInit {
   constructor(public privateAreaService: PrivateAreaService) {}
 
   ngOnInit() {
-    // this.privateAreaService.getExperiences();
     fromEvent(this.inputElement.nativeElement, "keyup")
       .pipe(
         debounceTime(300),

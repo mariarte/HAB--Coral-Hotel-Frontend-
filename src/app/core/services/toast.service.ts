@@ -7,6 +7,13 @@ import { Error } from "../core.models";
 export class ToastService {
   toasts: Toast[] = [];
 
+  /**
+   * Función para añadir una notificación toast
+   * @param {String} title
+   * @param {String} message
+   * @param {String} variant
+   * @param {Number} delay
+   */
   addToast(
     title: string,
     message: string,
@@ -17,7 +24,6 @@ export class ToastService {
       title,
       message,
       variant
-      // delay
     });
 
     if (delay) {
@@ -25,6 +31,11 @@ export class ToastService {
     }
   }
 
+  /**
+   * Función para añadir una notificación toast de error
+   * @param {Object} error
+   * @param {Number} delay
+   */
   addErrorToast(error, delay?: number) {
     this.toasts.unshift({
       title: "Error",
@@ -37,6 +48,11 @@ export class ToastService {
     }
   }
 
+  /**
+   * Función que comprueba si un toast es de error o no
+   * @param {Object} toast
+   * @return {Boolean}
+   */
   isErrorToast(toast: Toast) {
     if (toast.variant === "error") {
       return true;
@@ -44,12 +60,20 @@ export class ToastService {
     return false;
   }
 
+  /**
+   * Función que muestra la notificación toast por un tiempo estipulado
+   * @param {Number} milliseconds
+   */
   delayAndRemove(milliseconds: number) {
     setTimeout(() => {
       this.toasts.pop();
     }, milliseconds);
   }
 
+  /**
+   * Función que elimina la notificación toast del array donde están guardados
+   * @param {Number} index
+   */
   remove(index?: number) {
     if (index) {
       this.toasts.splice(index, 1);

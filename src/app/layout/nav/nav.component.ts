@@ -24,10 +24,12 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {}
 
+  /**
+   * Fija el menú a la parte izquierda
+   */
   @HostListener("window:scroll", ["$event"])
   handleScroll() {
     const windowScroll = window.pageYOffset;
-    // console.log({ windowScroll, menuPosition: this.menuPosition });
     if (windowScroll >= this.asidePosition) {
       this.sticky = true;
     } else {

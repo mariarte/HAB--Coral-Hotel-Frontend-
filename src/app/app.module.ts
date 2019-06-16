@@ -1,8 +1,8 @@
-import { BrowserModule } from "@angular/platform-browser"; // necesario para que angular trabaje en el navegador
+import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import * as $ from "jquery";
 
-import { AppRoutingModule } from "./app-routing.module"; // importo un modulo de routing
+import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { LayoutModule } from "./layout/layout.module";
 import { CoreModule } from "./core/core.module";
@@ -20,6 +20,6 @@ import { AppInitializerModule } from "./app-initializer.module";
     SharedModule
   ],
   providers: [],
-  bootstrap: [AppComponent] // donde arranca mi aplicacion
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

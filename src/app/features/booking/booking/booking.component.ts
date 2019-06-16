@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { BookingService } from "src/app/core/services/booking.service";
 import { UserService } from "src/app/core/services/user.service";
 import { ToastService } from "src/app/core/services/toast.service";
-import { text } from "@angular/core/src/render3";
 
 @Component({
   selector: "sn-booking",
@@ -19,12 +18,15 @@ export class BookingComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.bookingService // carga las order TODAS
+    this.bookingService // carga TODAS las order
       .getBookings(this.userService.currentUser.idUser)
       .subscribe();
   }
 
-  // añadir o restar cantidad en el boton de unidades
+  /**
+   * Función para disminuir la cantidad del valor
+   * @param {Object} booking
+   */
   substractQuantity(booking) {
     if (booking.units <= 1) {
       return;
@@ -32,18 +34,33 @@ export class BookingComponent implements OnInit {
     booking.units = booking.units - 1;
   }
 
+  /**
+   * Función para aumentar la cantidad del valor
+   * @param {Object} booking
+   */
   addQuantity(booking) {
     booking.units = booking.units + 1;
   }
 
-  // captura el event.target.value, que es el valor del textarea y se lo pone al booking que tengo
+  /**
+   * Captura el event.target.value, que es el valor del textarea
+   * y se añade al booking actual
+   * @param {Object} booking
+   * @param {Event} event
+   */
   updateBookingComments(booking, event) {
     const textareaValue = event.target.value;
     booking.comments = textareaValue;
   }
 
+  /**
+   * Añade una order desde la cesta a order confirmada
+   * @param {Number} idOrder
+   * @param {Number} units
+   * @param {String} comments
+   */
   updateOrder(idOrder: number, units: number, comments: string) {
-    console.log("COMENTARIO: ", comments);
+    // console.log("COMENTARIO: ", comments);
     if (comments === null) {
       comments = "";
     }
@@ -56,9 +73,12 @@ export class BookingComponent implements OnInit {
     // ***********************
     //* *********************
     // INCLUIR EMAIL A USUARIO Y A RECEPCION
-    console.log("COMENTARIO 2: ", comments);
   }
 
+  /**
+   * Elimina una order que estaba en la cesta y el usuario decide borrarla
+   * @param {Number} idOrder
+   */
   deleteOrder(idOrder) {
     this.bookingService.deleteOrder(idOrder).subscribe(() => {
       this.toastService.addToast(

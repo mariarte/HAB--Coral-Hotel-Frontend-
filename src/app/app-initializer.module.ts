@@ -1,7 +1,6 @@
 import { NgModule, APP_INITIALIZER } from "@angular/core";
 import { UserService } from "./core/services/user.service";
 import { BookingService } from "./core/services/booking.service";
-// import { NotificationService } from './core/services/notification.service';
 
 export function getInitialData(
   userService: UserService,
@@ -13,6 +12,7 @@ export function getInitialData(
         try {
           await userService.getUserProfile().toPromise();
           console.log("USER INICIAL: ", userService.currentUser.idUser);
+          /************************* */
           await bookingService
             .getBookings(userService.currentUser.idUser)
             .toPromise();
@@ -33,7 +33,6 @@ export function getInitialData(
       provide: APP_INITIALIZER,
       useFactory: getInitialData,
       deps: [UserService, BookingService],
-      //   deps: [UserService, NotificationService],
       multi: true
     }
   ]

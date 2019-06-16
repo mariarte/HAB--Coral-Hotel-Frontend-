@@ -11,7 +11,6 @@ import { NavComponent } from "./nav/nav.component";
 import { ToastComponent } from "./toast/toast.component";
 import { SearchComponent } from "./search/search.component";
 import { BadgeComponent } from "./badge/badge.component";
-import { ClockComponent } from "./clock/clock.component";
 import { FormsModule } from "@angular/forms";
 import { PhoneComponent } from "./phone/phone.component";
 
@@ -26,7 +25,6 @@ import { PhoneComponent } from "./phone/phone.component";
     ToastComponent,
     SearchComponent,
     BadgeComponent,
-    ClockComponent,
     PhoneComponent
   ],
   imports: [CommonModule, RouterModule, SharedModule, FormsModule],

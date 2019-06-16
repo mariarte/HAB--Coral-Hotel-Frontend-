@@ -15,6 +15,10 @@ export class AuthService {
     this.authInfo = JSON.parse(localStorage.getItem("auth"));
   }
 
+  /**
+   * Función que realiza el login
+   * @param {Objeto} user
+   */
   login({ email, password }) {
     return this.http
       .post(`${environment.apiBaseUrl}/account/login`, {
@@ -29,6 +33,10 @@ export class AuthService {
       );
   }
 
+  /**
+   * Función que realiza el register
+   * @param {Object} user
+   */
   register({ fullName, email, password }) {
     return this.http.post(`${environment.apiBaseUrl}/account`, {
       fullName,
@@ -37,10 +45,12 @@ export class AuthService {
     });
   }
 
+  /**
+   * Función que realiza logout, borrando los datos del usuario
+   */
   logout() {
     localStorage.removeItem("auth");
     this.authInfo = null;
     location.href = "/welcome";
-    // this.router.navigate(["/welcome"]);
   }
 }

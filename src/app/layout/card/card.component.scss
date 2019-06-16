@@ -9,11 +9,6 @@ $orange: hsl(50, 80%, 50%);
     box-sizing: border-box;
 }
 
-// @mixin mobile($size: 640px) {
-//     @media screen and (max-width: $size) {
-//         @content;
-//     }
-// }
 .content {
     display: flex;
     flex-direction: row;
@@ -29,20 +24,11 @@ $orange: hsl(50, 80%, 50%);
     flex: 1;
     color: inherit;
     cursor: pointer;
-    // width: calc(40% - 2rem);
-    // min-width: calc(40% - 2rem);
     width: 100%;
     height: 370px;
-    // min-height: 400px;
     perspective: 1000px;
     margin: 0.5rem;
     position: relative;
-    // @include mobile(800px) {
-    //     width: calc(50% - 2rem);
-    // }
-    // @include mobile(500px) {
-    //     width: 100%;
-    // }
 }
 
 .front,
@@ -55,13 +41,12 @@ $orange: hsl(50, 80%, 50%);
     justify-content: center;
     align-items: center;
     position: absolute;
-    height: 100%; // el fondo ocupa la card completa
+    height: 100%;
     width: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transform-style: preserve-3d;
     transition: ease-in-out 600ms;
-    // overflow: hidden;
 }
 
 .front {
@@ -73,7 +58,6 @@ $orange: hsl(50, 80%, 50%);
     font-weight: bolder;
     text-align: center;
     color: #fff;
-    // word-wrap: break-word;
     overflow: hidden;
     &:before {
         position: absolute;
@@ -97,8 +81,6 @@ $orange: hsl(50, 80%, 50%);
     transform: rotateY(-180deg);
     padding: 0 0.5em;
     .button {
-        // background: linear-gradient(135deg, #ff416c, #ff6f61);
-        // background: linear-gradient( 135deg, adjust-hue(#ff6f61, -20deg), $secondary);
         &:before {
             box-shadow: 0 0 10px 10px rgba(#ff6f61, 0.25);
             background-color: rgba(#ff6f61, 0.25);
@@ -137,9 +119,7 @@ p {
 div.back {
     font-size: 12px;
     font-weight: 100;
-    // line-height: 20px;
     letter-spacing: 0.7px;
-    // margin: 20px 0 30px;
 }
 
 hr {

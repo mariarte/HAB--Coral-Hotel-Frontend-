@@ -5,7 +5,6 @@ import { OrderService } from "src/app/core/services/order.service";
 import { ToastService } from "src/app/core/services/toast.service";
 import { BookingService } from "src/app/core/services/booking.service";
 import { Experience } from "src/app/features/private-area/private-area.models";
-import { BadgeComponent } from "../badge/badge.component";
 
 @Component({
   selector: "sn-card",
@@ -27,7 +26,10 @@ export class CardComponent implements OnInit {
     this.privateArea.getExperiences().subscribe();
   }
 
-  // añadir o restar cantidad en el boton
+  /**
+   * Función para disminuir la cantidad del valor
+   * @param {Object} experience
+   */
   substractQuantity(experience) {
     if (experience.quantity <= 1) {
       return;
@@ -35,31 +37,31 @@ export class CardComponent implements OnInit {
     experience.quantity = experience.quantity - 1;
   }
 
+  /**
+   * Función para aumentar la cantidad del valor
+   * @param {Object} experience
+   */
   addQuantity(experience) {
     experience.quantity = experience.quantity + 1;
   }
 
+  /**
+   * Función para añadir la order a la cesta
+   * @param {Object} experience
+   * @param ngmodel
+   */
   addOrder(experience, ngmodel) {
-    console.log(this.userService.currentUser.idUser);
-    console.log(this.userService.currentUser.email);
-    console.log(experience.idExperience);
-    console.log(experience.quantity);
-    console.log("Comments 1: ", experience.comments);
-    console.log("Mi variable ngmodel", ngmodel);
-
-    // Lo meto en subscribe para que cuando tenga el ok del back, añada el toast, etc...
     this.orderService.insertOrder({ experience }).subscribe(() => {
       this.toastService.addToast(
         "Experiencia añadida",
         "Confirme los datos en su carrito para que el departamento de recepción lo procese correctamente."
       );
-      experience.quantity = 1; // Reseteo las unidades de la card a 1
+      experience.quantity = 1;
       experience.comments = "";
       this.bookingService // Muestro las order de la cesta para que se vayan actualizando
         .getBookings(this.userService.currentUser.idUser)
         .subscribe();
     });
-
     ngmodel.reset(); // para que no me salga el estilo de form verde
   }
 }

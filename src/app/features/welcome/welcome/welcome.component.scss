@@ -1,7 +1,6 @@
 :host {
     background: #f6f5f7;
     display: block;
-    // justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: "Montserrat", sans-serif;
@@ -10,21 +9,17 @@
 }
 
 .container {
-    /*contenedor general*/
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     position: relative;
     height: 80%;
     width: 90%;
-    /*Anchura total del contenedor*/
     max-height: 520px;
     max-width: 800px;
     min-height: 520px;
     min-width: 800px;
     .button-gradient {
-        // background: linear-gradient(135deg, #ff416c, #ff6f61);
-        // background: linear-gradient( 135deg, adjust-hue(#ff6f61, -20deg), $secondary);
         &:before {
             box-shadow: 0 0 10px 10px rgba(#ff6f61, 0.25);
             background-color: rgba(#ff6f61, 0.25);

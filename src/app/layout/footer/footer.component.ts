@@ -9,7 +9,6 @@ import { Router } from "@angular/router";
         Creado con <i class="fa fa-heart"></i> por
         <span> © María Arteaga · </span>
         <a target="_blank" routerLink="about">About</a>
-        <!-- Tengo que importar el modulo que lo contiene en layout.module.ts-->
       </p>
     </nav>
   `,

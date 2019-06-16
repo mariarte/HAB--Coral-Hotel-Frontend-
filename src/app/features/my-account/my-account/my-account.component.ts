@@ -35,6 +35,9 @@ export class MyAccountComponent implements OnInit {
     });
   }
 
+  /**
+   * Actualiza el perfil del usuario. El único campo permitido para cambiar es fullName
+   */
   updateProfile() {
     if (this.updateProfileForm.valid) {
       this.userService
@@ -48,6 +51,9 @@ export class MyAccountComponent implements OnInit {
     }
   }
 
+  /**
+   * Borra el perfil de usuario
+   */
   deleteProfile() {
     this.userService
       .deleteProfile(this.userService.currentUser)

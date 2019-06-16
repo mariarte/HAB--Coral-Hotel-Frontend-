@@ -8,7 +8,7 @@ const routes: Routes = [
   {
     path: "",
     redirectTo: "welcome",
-    pathMatch: "full" // matchea ese path
+    pathMatch: "full"
   },
 
   {
@@ -51,10 +51,10 @@ const routes: Routes = [
     path: "**",
     component: NotFoundComponent
   }
-]; // es el tipo de datos en typescript
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)], // configura ese modulo para que funcione con las rutas que le estoy pasando
-  exports: [RouterModule] // aqui exporto el modulo tal cual lo he creado en el imports anterior
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}

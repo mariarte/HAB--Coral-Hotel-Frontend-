@@ -9,7 +9,6 @@ import { UserService } from "src/app/core/services/user.service";
   styleUrls: ["./badge.component.scss"]
 })
 export class BadgeComponent implements OnInit {
-  // counter = 0;
   constructor(
     public userService: UserService,
     public orderService: OrderService,
@@ -18,8 +17,12 @@ export class BadgeComponent implements OnInit {
 
   ngOnInit() {}
 
+  /**
+   * Obtiene TODAS las order en la cesta
+   * @param {Number} idUser
+   */
   getBookings(idUser) {
-    this.bookingService // muestra TODAS las order en la cesta
+    this.bookingService
       .getBookings(this.userService.currentUser.idUser)
       .subscribe();
   }

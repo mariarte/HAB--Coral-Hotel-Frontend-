@@ -9,5 +9,5 @@ if (environment.production) {
 }
 
 platformBrowserDynamic()
-  .bootstrapModule(AppModule) // donde arranca mi aplicacion
+  .bootstrapModule(AppModule)
   .catch(err => console.error(err));

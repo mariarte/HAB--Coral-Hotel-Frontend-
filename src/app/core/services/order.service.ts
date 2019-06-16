@@ -9,6 +9,10 @@ import { tap } from "rxjs/operators";
 export class OrderService {
   constructor(private http: HttpClient) {}
 
+  /**
+   * Función que inserta una order
+   * @param {Object} experience
+   */
   insertOrder({ experience }) {
     return this.http.post(`${environment.apiBaseUrl}/order`, {
       idExperience: experience.idExperience,
