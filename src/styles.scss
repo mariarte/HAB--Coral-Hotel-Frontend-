@@ -55,15 +55,6 @@ $enable-responsive-font-sizes: true;
     animation-name: fadeIn;
 }
 
-a {
-    cursor: pointer !important;
-    color: #fff;
-    &:hover {
-        color: #000;
-        text-decoration: none;
-    }
-}
-
 
 /* Estilos de botones */
 
@@ -122,5 +113,14 @@ button,
     }
     &:focus {
         outline: none;
+    }
+}
+
+a {
+    cursor: pointer !important;
+    color: #fff;
+    &:hover {
+        color: #000;
+        text-decoration: none;
     }
 }

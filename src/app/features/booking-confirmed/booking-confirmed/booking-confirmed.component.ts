@@ -18,7 +18,5 @@ export class BookingConfirmedComponent implements OnInit {
     this.bookingConfirmedService // carga las order CONFIRMADAS
       .getBookingsConfirmed(this.userService.currentUser.idUser)
       .subscribe();
-
-    console.log(this.userService.currentUser.fullName);
   }
 }
