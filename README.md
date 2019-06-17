@@ -1,20 +1,20 @@
 # The Coral Hotel
 
 Proyecto desarrollado como actividad final del bootcamp _Hack a Bos_.  
-Plataforma enfocada al turismo de hoteles. Los usuarios podrán acceder a la aplicación desde un dispositivo (tableta o PC) que el hotel pone a disposición en cada habitación.  
+Plataforma enfocada al turismo de hoteles o alojamientos. Los usuarios podrán acceder a la aplicación desde un dispositivo (tableta o PC) que el hotel pondrá a su disposición en cada habitación.  
 El cliente puede encontrar información de interés que hotel considere oportuna, reservar experiencias de una manera personalizada y rápida, acceder a sus reservas y llevar un control de los gastos o incluso, llamar a recepción sin teléfono propio.
 
 ![The Coral Hotel](https://res.cloudinary.com/cloudmaria/image/upload/v1560808523/image1_snvvn0.png)
 
 ## Características 📝
 
-- Ordenar productos por nombre, precio (asc) y precio (desc)
-- Búsqueda instantánea por nombre del producto
-- Filtre productos por categorías, rango de precios, disponibilidad y más filtros personalizados.
-- Agregar productos al carrito de compras
-- Ver detalles y administrar el carrito de compras
-- También puedes cargar tus propios datos a través de la aplicación. Verá un botón rojo con un ícono de _ enlace _, haga clic en él y pegue la URL. El archivo JSON debe seguir un formato específico. [ver ejemplo aquí](http://carlosroso.com/angular2-shop-json/). ** IMPORTANTE: ** Asegúrese de establecer el encabezado apropiado de `Access-Control-Allow-Methods` en su respuesta HTTP JSON.
-- **Interfaz de usuario bastante atractiva y algunas animaciones de fantasía para mejorar UX**
+- Búsqueda instantánea por nombre del producto (Full Text Search)
+- Reserva de las experiencias que ofrece el hotel, agregando al carrito.
+- Posibilidad de modificar o eliminar las pre-reservas que se están en el carrito.
+- Ver detalles de las reservas confirmadas, sirviendo como control de gastos al usuario.
+- Puede acceder a sus propios datos, modificando o incluso borrando el perfil
+- Llamadas directas al departamento de recepción (sin usar teléfono propio)
+- **Interfaz de usuario bastante atractiva y algunas animaciones de fantasía para mejorar**
 
 ## Comenzando 🚀
 
@@ -22,7 +22,7 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 
 Mira **Deployment** para conocer como desplegar el proyecto.
 
-### Pre-requisitos 📋
+### > Pre-requisitos 📋
 
 _Que cosas necesitas para instalar el software y como instalarlas_
 
