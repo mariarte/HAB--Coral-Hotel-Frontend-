@@ -6,6 +6,7 @@ El cliente puede encontrar información de interés que hotel considere oportuna
 
 ![The Coral Hotel](https://res.cloudinary.com/cloudmaria/image/upload/v1560808523/image1_snvvn0.png)
 
+
 ## Características 📝
 
 - Búsqueda instantánea por nombre de la experiencia (Full Text Search)
@@ -15,6 +16,7 @@ El cliente puede encontrar información de interés que hotel considere oportuna
 - Puede acceder a sus propios datos, modificando o incluso borrando el perfil
 - Llamadas directas al departamento de recepción (sin usar teléfono propio)
 - **Interfaz de usuario bastante atractiva y algunas animaciones de fantasía para mejorar**
+
 
 ## Comenzando 🚀
 
@@ -34,24 +36,21 @@ npm install -g angular-cli
 
 ### Instalación 🔧
 
-_Pasos a ejecutar para tener un entorno de desarrollo_
+_Pasos a ejecutar para tener un entorno de desarrollo:_
 
-_Clona el proyecto_
-
+_1.-Clona el proyecto_
 ```bash
 git clone https://github.com/mariarte/HAB--Coral-Hotel-Frontend-
 ```
 
-_Instalar dependencias npm dentro de la carpeta del proyecto_
+_2.-Instalar dependencias npm dentro de la carpeta del proyecto_
 
 ```bash
 cd coralhotel
 npm install
 ```
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
-## Development server 🧩
+### Development server 🧩
 
 _Comience la aplicación para un servidor de desarrollo_
 
@@ -62,13 +61,19 @@ ng serve
 _Ahora abra una nueva pestaña en_ **localhost:4200**
 _y la app cargará automáticamente._
 
-## Construir 🧩
+
+_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+
+
+## Construir 🏗
 
 Ejecuta `ng build` para construir el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/`. Use el indicador `-prod` para una compilación de producción.
+
 
 ## Deployment 📦
 
 _Agrega notas adicionales sobre como hacer deploy_
+
 
 ## Construido con 🛠️
 
@@ -80,19 +85,16 @@ Este proyecto ha sido creado con [Angular CLI](https://github.com/angular/angula
 - [Maven](https://maven.apache.org/) - Manejador de dependencias
 - [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
 
+
 ## Ayuda adicional 🙏🏻
 
 Para obtener más ayuda sobre Angular CLI usa `ng help` o consulta [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
+## Autores ✒️
 
 - **María Arteaga** - _Trabajo Inicial_ - [mariarte](https://github.com/mariarte)
 
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
 ## Expresiones de Gratitud 🎁
 
