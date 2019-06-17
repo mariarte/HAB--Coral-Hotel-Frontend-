@@ -1,3 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Reenie+Beanie");
+:host {
+    background: #f6f5f7;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    height: 73vh;
+    max-width: 800px;
+    min-width: 800px;
+    margin-bottom: 1rem;
+}
+
 h1 {
     font-size: 3rem;
     font-weight: 800;
@@ -37,4 +58,8 @@ img {
     &:hover {
         color: #ff6f61;
     }
+}
+
+button {
+    width: 180px;
 }

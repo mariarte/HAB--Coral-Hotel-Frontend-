@@ -6,6 +6,10 @@ button {
     &:active {
         outline: none;
     }
+    &:before {
+        box-shadow: 0 0 10px 10px rgba(#ff6f61, 0.25);
+        background-color: rgba(#ff6f61, 0.25);
+    }
 }
 
 .fa-phone-volume {

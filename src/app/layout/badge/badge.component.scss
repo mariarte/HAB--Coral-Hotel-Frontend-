@@ -1,24 +1,28 @@
-.button {
-    background: transparent;
+button {
+    border: none;
+    &:focus {
+        outline: none;
+    }
+    &:active {
+        outline: none;
+    }
     &:before {
         box-shadow: 0 0 10px 10px rgba(#ff6f61, 0.25);
         background-color: rgba(#ff6f61, 0.25);
     }
 }
 
-button.btn {
-    border: none;
-}
-
 .badge {
     float: right;
     font-size: 20px;
+    position: relative;
     left: -40px;
     top: -10px;
 }
 
 .fa {
     font-size: 60px;
+    color: #000;
     &:hover {
         color: #ff6f61;
     }
