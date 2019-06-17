@@ -1,9 +1,9 @@
 # The Coral Hotel
 
 Proyecto desarrollado como actividad final del bootcamp _Hack a Bos_.
-Se trata de una aplicación enfocada al turismo de hoteles.
-Los usuarios podrán acceder a la aplicación desde un dispositivo que tendrán en la habitación. De tal forma, que puedan encontrar información de interés, reservar experiencias de una manera personalizada, acceder a sus reservas o incluso llamar a recepción sin teléfono.
-Este proyecto ha sido creado con [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+Se trata de una aplicación enfocada al turismo de hoteles.  
+Los usuarios podrán acceder a la app desde un dispositivo que el hotel pone a disposición en cada habitación.  
+Así el cliente puede encontrar información de interés que hotel considere oportuna, reservar experiencias de una manera personalizada y rápida, acceder a sus reservas y llevar un control de los gastos o incluso, llamar a recepción sin teléfono propio.
 
 ![stack Overflow](https://res.cloudinary.com/cloudmaria/image/upload/v1560808523/image1_snvvn0.png)
 
@@ -54,6 +54,8 @@ _Agrega notas adicionales sobre como hacer deploy_
 ## Construido con 🛠️
 
 _Menciona las herramientas que utilizaste para crear tu proyecto_
+
+Este proyecto ha sido creado con [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
 - [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
 - [Maven](https://maven.apache.org/) - Manejador de dependencias
