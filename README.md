@@ -6,7 +6,7 @@ El cliente puede encontrar información de interés que hotel considere oportuna
 
 ![The Coral Hotel](https://res.cloudinary.com/cloudmaria/image/upload/v1560808523/image1_snvvn0.png)
 
-## Caracteristicas
+## Características 📝
 
 - Ordenar productos por nombre, precio (asc) y precio (desc)
 - Búsqueda instantánea por nombre del producto
@@ -51,7 +51,7 @@ npm install
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
-## Development server
+## Development server 🧩
 
 _Comience la aplicación para un servidor de desarrollo_
 
@@ -62,7 +62,7 @@ ng serve
 _Ahora abra una nueva pestaña en_ **localhost:4200**
 _y la app cargará automáticamente._
 
-## Construir
+## Construir 🧩
 
 Ejecuta `ng build` para construir el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/`. Use el indicador `-prod` para una compilación de producción.
 
@@ -80,7 +80,7 @@ Este proyecto ha sido creado con [Angular CLI](https://github.com/angular/angula
 - [Maven](https://maven.apache.org/) - Manejador de dependencias
 - [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
 
-## Ayuda adicional
+## Ayuda adicional 🙏🏻
 
 Para obtener más ayuda sobre Angular CLI usa `ng help` o consulta [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
