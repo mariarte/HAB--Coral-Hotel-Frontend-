@@ -5,7 +5,7 @@ Se trata de una aplicación enfocada al turismo de hoteles.
 Los usuarios podrán acceder a la aplicación desde un dispositivo que tendrán en la habitación. De tal forma, que puedan encontrar información de interés, reservar experiencias de una manera personalizada, acceder a sus reservas o incluso llamar a recepción sin teléfono.
 Este proyecto ha sido creado con [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
-![stack Overflow](https://res.cloudinary.com/cloudmaria/image/upload/v1560809192/image1_zogolq.png)
+![stack Overflow](https://res.cloudinary.com/cloudmaria/image/upload/v1560808523/image1_snvvn0.png)
 
 ## Comenzando 🚀
 
