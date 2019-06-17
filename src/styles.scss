@@ -57,14 +57,20 @@ $enable-responsive-font-sizes: true;
 
 a {
     cursor: pointer !important;
+    color: #fff;
+    &:hover {
+        color: #000;
+        text-decoration: none;
+    }
 }
 
 
 /* Estilos de botones */
 
-button {
+button,
+.button {
     $height: 40px;
-    width: 180px;
+    width: 170px;
     transform: translateZ($height);
     cursor: pointer;
     -webkit-backface-visibility: hidden;
@@ -77,6 +83,7 @@ button {
     border-radius: 100px;
     letter-spacing: 1.2px;
     text-transform: uppercase;
+    text-align: center;
     transition: transform 80ms ease-in;
     border: 1px solid #ff6f61;
     background-color: #ff6f61;
