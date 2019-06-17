@@ -8,7 +8,7 @@ El cliente puede encontrar información de interés que hotel considere oportuna
 
 ## Características 📝
 
-- Búsqueda instantánea por nombre del producto (Full Text Search)
+- Búsqueda instantánea por nombre de la experiencia (Full Text Search)
 - Reserva de las experiencias que ofrece el hotel, agregando al carrito.
 - Posibilidad de modificar o eliminar las pre-reservas que se están en el carrito.
 - Ver detalles de las reservas confirmadas, sirviendo como control de gastos al usuario.
