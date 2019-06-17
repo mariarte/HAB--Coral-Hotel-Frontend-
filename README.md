@@ -1,11 +1,20 @@
 # The Coral Hotel
 
-Proyecto desarrollado como actividad final del bootcamp _Hack a Bos_.
-Se trata de una aplicación enfocada al turismo de hoteles.  
-Los usuarios podrán acceder a la app desde un dispositivo que el hotel pone a disposición en cada habitación.  
-Así el cliente puede encontrar información de interés que hotel considere oportuna, reservar experiencias de una manera personalizada y rápida, acceder a sus reservas y llevar un control de los gastos o incluso, llamar a recepción sin teléfono propio.
+Proyecto desarrollado como actividad final del bootcamp _Hack a Bos_.  
+Plataforma enfocada al turismo de hoteles. Los usuarios podrán acceder a la aplicación desde un dispositivo (tableta o PC) que el hotel pone a disposición en cada habitación.  
+El cliente puede encontrar información de interés que hotel considere oportuna, reservar experiencias de una manera personalizada y rápida, acceder a sus reservas y llevar un control de los gastos o incluso, llamar a recepción sin teléfono propio.
 
-![stack Overflow](https://res.cloudinary.com/cloudmaria/image/upload/v1560808523/image1_snvvn0.png)
+![The Coral Hotel](https://res.cloudinary.com/cloudmaria/image/upload/v1560808523/image1_snvvn0.png)
+
+## Caracteristicas
+
+- Ordenar productos por nombre, precio (asc) y precio (desc)
+- Búsqueda instantánea por nombre del producto
+- Filtre productos por categorías, rango de precios, disponibilidad y más filtros personalizados.
+- Agregar productos al carrito de compras
+- Ver detalles y administrar el carrito de compras
+- También puedes cargar tus propios datos a través de la aplicación. Verá un botón rojo con un ícono de _ enlace _, haga clic en él y pegue la URL. El archivo JSON debe seguir un formato específico. [ver ejemplo aquí](http://carlosroso.com/angular2-shop-json/). ** IMPORTANTE: ** Asegúrese de establecer el encabezado apropiado de `Access-Control-Allow-Methods` en su respuesta HTTP JSON.
+- **Interfaz de usuario bastante atractiva y algunas animaciones de fantasía para mejorar UX**
 
 ## Comenzando 🚀
 
@@ -17,35 +26,45 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 
 _Que cosas necesitas para instalar el software y como instalarlas_
 
-```
-Da un ejemplo
+_Asegúrate de tener `angular-cli` instalado_
+
+```bash
+npm install -g angular-cli
 ```
 
 ### Instalación 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+_Pasos a ejecutar para tener un entorno de desarrollo_
 
-_Dí cómo será ese paso_
+_Clona el proyecto_
 
+```bash
+git clone https://github.com/mariarte/HAB--Coral-Hotel-Frontend-
 ```
-Da un ejemplo
-```
 
-_Y repite_
+_Instalar dependencias npm dentro de la carpeta del proyecto_
 
-```
-hasta finalizar
+```bash
+cd coralhotel
+npm install
 ```
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
 ## Development server
 
-Ejecuta `ng serve` para el servidor de desarrollo. Navega a `http://localhost:4200/`. La app cargará automáticamente.
+_Comience la aplicación para un servidor de desarrollo_
 
-## Build
+```bash
+ng serve
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+_Ahora abra una nueva pestaña en_ **localhost:4200**
+_y la app cargará automáticamente._
+
+## Construir
+
+Ejecuta `ng build` para construir el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/`. Use el indicador `-prod` para una compilación de producción.
 
 ## Deployment 📦
 
@@ -61,9 +80,9 @@ Este proyecto ha sido creado con [Angular CLI](https://github.com/angular/angula
 - [Maven](https://maven.apache.org/) - Manejador de dependencias
 - [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
 
-## Further help
+## Ayuda adicional
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para obtener más ayuda sobre Angular CLI usa `ng help` o consulta [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## Autores ✒️
 
