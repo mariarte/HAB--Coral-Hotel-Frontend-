@@ -8,25 +8,22 @@ El cliente puede encontrar información de interés que hotel considere oportuna
 
 ## Características 📝
 
-- Búsqueda instantánea por nombre de la experiencia (Full Text Search)
 - Reserva de las experiencias que ofrece el hotel, agregando al carrito.
 - Posibilidad de modificar o eliminar las pre-reservas que se están en el carrito.
 - Ver detalles de las reservas confirmadas, sirviendo como control de gastos al usuario.
-- Puede acceder a sus propios datos, modificando o incluso borrando el perfil
-- Llamadas directas al departamento de recepción (sin usar teléfono propio)
-- **Interfaz de usuario bastante atractiva y algunas animaciones de fantasía para mejorar**
+- Puede acceder a sus propios datos, modificando o incluso borrando el perfil.
+- Búsqueda instantánea por nombre de la experiencia (Full Text Search).
+- Llamadas directas al departamento de recepción (sin usar teléfono propio).
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+_Estas instrucciones permitirán obtener una copia del proyecto en funcionamiento en su máquina local para propósitos de desarrollo y pruebas._
 
-Mira **Deployment** para conocer como desplegar el proyecto.
+Mire **Deployment** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
-
-_Asegúrate de tener `angular-cli` instalado_
+_Asegúrese de tener `angular-cli` instalado_
 
 ```bash
 npm install -g angular-cli
@@ -36,13 +33,13 @@ npm install -g angular-cli
 
 _Pasos a ejecutar para tener un entorno de desarrollo:_
 
-_1.-Clona el proyecto_
+_1.- Clona el proyecto_
 
 ```bash
 git clone https://github.com/mariarte/HAB--Coral-Hotel-Frontend-
 ```
 
-_2.-Instalar dependencias npm dentro de la carpeta del proyecto_
+_2.- Instalar dependencias npm dentro de la carpeta del proyecto_
 
 ```bash
 cd coralhotel
@@ -60,11 +57,13 @@ ng serve
 _Ahora abra una nueva pestaña en_ **localhost:4200**
 _y la app cargará automáticamente._
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+_Si desea obtener datos del sistema o usarlos para una pequeña demo, el usuario de pruebas es:_
+`Email: prueba@mailinator.com`
+`Pass: 123456`
 
 ## Construir 🏗
 
-Ejecuta `ng build` para construir el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/`. Use el indicador `-prod` para una compilación de producción.
+Ejecute `ng build` para construir el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/`. Use el indicador `-prod` para una compilación de producción.
 
 ## Deployment 📦
 
@@ -75,13 +74,10 @@ _Agrega notas adicionales sobre como hacer deploy_
 Este proyecto ha sido creado con:
 
 - [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
-- [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-- [Maven](https://maven.apache.org/) - Manejador de dependencias
-- [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
 
 ## Ayuda adicional 🙏🏻
 
-Para obtener más ayuda sobre Angular CLI usa `ng help` o consulta [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para obtener más ayuda sobre Angular CLI usa `ng help` o consulte [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## Autores ✒️
 
@@ -89,7 +85,5 @@ Para obtener más ayuda sobre Angular CLI usa `ng help` o consulta [Angular CLI 
 
 ## Expresiones de Gratitud 🎁
 
-- Comenta a otros sobre este proyecto 📢
-- Invita una cerveza 🍺 a alguien del equipo.
-- Da las gracias públicamente 🤓.
-- etc.
+- Comente y enseñe a otras personas este proyecto 📢
+- Muchas gracias a todo el equipo y compañeros por el apoyo mostrado en todo momento 🤓.
