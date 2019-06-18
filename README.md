@@ -58,6 +58,7 @@ _Ahora abra una nueva pestaña en_ **localhost:4200**
 _y la app cargará automáticamente._
 
 _Si desea obtener datos del sistema o usarlos para una pequeña demo, el usuario de pruebas es:_
+
 `Email: prueba@mailinator.com`
 `Pass: 123456`
 
