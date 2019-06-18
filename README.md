@@ -72,7 +72,7 @@ Ejecute `ng build` para construir el proyecto. Los artefactos de construcción s
 
 ## Deployment 📦
 
-_Puede usar la versión desplegada de la app con todas sus funcionalidades en: _
+_Puede usar la versión desplegada de la app con todas sus funcionalidades en:_
 [The Coral Hotel](https://coralhotel-front.herokuapp.com)
 
 ## Construido con 🛠️
