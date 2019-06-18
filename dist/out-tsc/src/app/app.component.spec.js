@@ -1,8 +1,8 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-describe('AppComponent', function () {
-    beforeEach(async(function () {
+describe('AppComponent', function() {
+    beforeEach(async(function() {
         TestBed.configureTestingModule({
             imports: [
                 RouterTestingModule
@@ -12,21 +12,21 @@ describe('AppComponent', function () {
             ],
         }).compileComponents();
     }));
-    it('should create the app', function () {
+    it('should create the app', function() {
         var fixture = TestBed.createComponent(AppComponent);
         var app = fixture.debugElement.componentInstance;
         expect(app).toBeTruthy();
     });
-    it("should have as title 'social-network'", function () {
+    it("should have as title 'coral-hotel'", function() {
         var fixture = TestBed.createComponent(AppComponent);
         var app = fixture.debugElement.componentInstance;
-        expect(app.title).toEqual('social-network');
+        expect(app.title).toEqual('coral-hotel');
     });
-    it('should render title in a h1 tag', function () {
+    it('should render title in a h1 tag', function() {
         var fixture = TestBed.createComponent(AppComponent);
         fixture.detectChanges();
         var compiled = fixture.debugElement.nativeElement;
-        expect(compiled.querySelector('h1').textContent).toContain('Welcome to social-network!');
+        expect(compiled.querySelector('h1').textContent).toContain('Welcome to coral-hotel!');
     });
 });
 //# sourceMappingURL=app.component.spec.js.map
