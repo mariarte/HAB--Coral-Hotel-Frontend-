@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: "root" // Obligatorio!! Generar una unica instancia
+  providedIn: "root"
 })
 export class ModalService {
   opened = false;

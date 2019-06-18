@@ -11,8 +11,6 @@ export function getInitialData(
       return new Promise(async resolve => {
         try {
           await userService.getUserProfile().toPromise();
-          console.log("USER INICIAL: ", userService.currentUser.idUser);
-          /************************* */
           await bookingService
             .getBookings(userService.currentUser.idUser)
             .toPromise();

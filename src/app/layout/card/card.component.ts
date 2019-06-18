@@ -62,6 +62,6 @@ export class CardComponent implements OnInit {
         .getBookings(this.userService.currentUser.idUser)
         .subscribe();
     });
-    ngmodel.reset(); // para que no me salga el estilo de form verde
+    ngmodel.reset();
   }
 }

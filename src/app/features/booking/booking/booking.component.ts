@@ -60,7 +60,6 @@ export class BookingComponent implements OnInit {
    * @param {String} comments
    */
   updateOrder(idOrder: number, units: number, comments: string) {
-    // console.log("COMENTARIO: ", comments);
     if (comments === null) {
       comments = "";
     }
@@ -70,9 +69,6 @@ export class BookingComponent implements OnInit {
         "Su reserva ha sido confirmada. Puede revisarlas en el apartado 'Mis Reservas' "
       );
     });
-    // ***********************
-    //* *********************
-    // INCLUIR EMAIL A USUARIO Y A RECEPCION
   }
 
   /**

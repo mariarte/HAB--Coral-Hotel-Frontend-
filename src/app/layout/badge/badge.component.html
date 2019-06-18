@@ -2,7 +2,7 @@
     <div class="button mt-5 ml-3 bg-transparent border-0">
         <span class="badge badge-light" #badge *ngIf="bookingService.bookings.length !== 0">
         {{bookingService.getOrderCount() }}
-      </span>
+        </span>
         <i routerLink="/booking" class="fa fa-shopping-cart"></i>
     </div>
     <div class="button align-content-center" routerLink="/booking">

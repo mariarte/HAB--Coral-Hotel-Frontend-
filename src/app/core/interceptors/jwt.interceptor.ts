@@ -19,7 +19,6 @@ export class JWTInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<any>> {
     if (this.authService && this.authService.authInfo) {
       const { resultToken } = this.authService.authInfo;
-      // console.log({ resultToken });
       request = request.clone({
         setHeaders: {
           Authorization: `JWT ${resultToken}`
