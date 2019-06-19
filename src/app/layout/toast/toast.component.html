@@ -1,11 +1,11 @@
 <div id="toast-container">
     <div class="toast fade show" role="alert" class="bg-{{ toast.variant }}" *ngFor="let toast of toastService.toasts; let i = index">
         <div class="toast-header text-{{ toast.variant }}">
-            <i class="fa fa-exclamation-triangle rounded mr-2"></i>
+            <i class="fas fa-info-circle rounded mr-2"></i>
             <strong class="mr-auto">{{ toast.title }}</strong>
             <button type="button" class="close text-{{ toast.variant }}" (click)="toastService.remove(i)">
-        <span aria-hidden="true">&times;</span>
-      </button>
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
         <div class="toast-body">
             {{ toast.message }}
