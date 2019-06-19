@@ -56,10 +56,10 @@ npm install
 _Comience la aplicación para un servidor de desarrollo_
 
 ```bash
-node server
+ng serve
 ```
 
-_Ahora abra una nueva pestaña en_ **localhost:8080**
+_Ahora abra una nueva pestaña en_ **localhost:4200**
 _y la app cargará automáticamente._
 
 _Si desea obtener datos del sistema o usarlos para una pequeña demo, el usuario de pruebas es:_  
