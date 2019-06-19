@@ -3,7 +3,7 @@ import { Component } from "@angular/core";
 @Component({
   selector: "sn-header",
   template: `
-    <nav class="navbar justify-content-center" routerLink="/welcome">
+    <nav class="navbar justify-content-center" routerLink="/private-area">
       <img
         class="icon"
         src="../../../../assets/images/favicon.png"
