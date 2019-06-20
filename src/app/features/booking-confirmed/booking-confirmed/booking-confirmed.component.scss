@@ -46,6 +46,7 @@ li {
     text-align: left;
     color: #000;
     background: #fff;
+    cursor: not-allowed;
 }
 
 .far,
@@ -91,7 +92,7 @@ p.p_comments {
     resize: none;
     overflow-y: scroll;
     border: none;
-    cursor: pointer;
+    cursor: not-allowed;
 }
 
 .conta_null {
