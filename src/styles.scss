@@ -34,6 +34,12 @@ $enable-responsive-font-sizes: true;
     }
 }
 
+.was-validated .form-control:valid,
+.form-control.is-valid,
+.form-control.ng-touched.ng-valid {
+    border-color: #ced4da;
+}
+
 
 /* Animaciones entre paginas */
 
