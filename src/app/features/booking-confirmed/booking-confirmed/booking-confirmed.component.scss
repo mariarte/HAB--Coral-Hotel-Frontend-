@@ -107,3 +107,30 @@ p.p_comments {
     font-size: 8rem;
     color: lightgray;
 }
+
+.fa-comment-dots {
+    position: absolute;
+    top: 55px;
+    left: 14px;
+    z-index: 5;
+    @media (max-width: 1024px) and (orientation: portrait) {
+        //ipad vertical
+        top: 71px;
+        left: 3px;
+    }
+    @media (max-width: 1024px) and (orientation: landscape) {
+        // ipad horizontal
+        top: 55px;
+        left: 7px;
+    }
+    @media (min-width: 1024px) and (max-width:1366px) {
+        // ipad-pro vertical
+        top: 55px;
+        left: 10px;
+    }
+    @media (min-width: 1366px) and (orientation: landscape) {
+        // ipad-pro horizontal
+        top: 55px;
+        left: 18px;
+    }
+}
