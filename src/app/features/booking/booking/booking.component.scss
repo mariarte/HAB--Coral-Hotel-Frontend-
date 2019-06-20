@@ -91,7 +91,28 @@ li {
 .fa-comment-dots {
     position: absolute;
     top: 54px;
-    left: 15px;
+    left: 18px;
+    z-index: 5;
+    @media (max-width: 1024px) and (orientation: portrait) {
+        //ipad vertical
+        top: 57px;
+        left: 5px;
+    }
+    @media (max-width: 1024px) and (orientation: landscape) {
+        // ipad horizontal
+        top: 52px;
+        left: 12px;
+    }
+    @media (min-width: 1024px) and (max-width:1366px) {
+        // ipad-pro vertical
+        top: 53px;
+        left: 15px;
+    }
+    @media (min-width: 1366px) and (orientation: landscape) {
+        // ipad-pro horizontal
+        top: 55px;
+        left: 28px;
+    }
 }
 
 .fa-check-circle {
@@ -124,6 +145,7 @@ h1 {
 
 textarea {
     display: block;
+    position: relative;
     resize: none;
     height: 50%;
     width: 80%;
