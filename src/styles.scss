@@ -124,3 +124,20 @@ a {
         text-decoration: none;
     }
 }
+
+
+/* Estilo de texto seleccionado */
+
+input,
+div ::selection {
+    background: #c1bcbc;
+    color: #fff;
+}
+
+
+/* Estilo de texto seleccionado -- Firefox */
+
+input::-moz-selection {
+    background: #c1bcbc;
+    color: #fff;
+}
