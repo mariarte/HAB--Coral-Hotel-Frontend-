@@ -10,7 +10,10 @@
     <div class="card p-2 m-3" *ngFor="let booking of bookingConfirmedService.bookings">
         <div class="title">
             <h1>{{booking.title}}</h1>
-            <p class="p_comments pl-4 mx-auto" *ngIf="booking.comments !== '' ">"{{booking.comments}}"<i class="fas fa-comment-dots"></i></p>
+            <i class="fas fa-comment-dots"></i>
+            <textarea class="p_comments pl-4 mx-auto" *ngIf="booking.comments !== '' " readonly>{{ booking.comments }}
+                </textarea>
+            <!-- <p class="p_commentsmx-auto" *ngIf="booking.comments !== '' ">"{{booking.comments}}"<i class="fas fa-comment-dots"></i></p> -->
         </div>
         <div class="dates">
             <ul>
