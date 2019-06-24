@@ -113,6 +113,11 @@ li {
         top: 55px;
         left: 28px;
     }
+    @media (min-width: 1440px) {
+        // pc
+        top: 55px;
+        left: 15px;
+    }
 }
 
 .fa-check-circle {
