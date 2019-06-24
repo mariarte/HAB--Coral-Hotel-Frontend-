@@ -1,125 +1,140 @@
-$primary: hsl(222, 80%, 50%);
-$primary-light: hsl(222, 50%, 95%);
-$secondary: hsl(350, 80%, 50%);
-$red: hsl(10, 80%, 50%);
-$orange: hsl(50, 80%, 50%);
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
-.card {
-    flex: 1;
-    color: inherit;
-    cursor: pointer;
-    width: 100%;
-    height: 370px;
-    min-width: 225px;
-    perspective: 1000px;
-    margin: 0.5rem;
-    position: relative;
-}
-
-.front,
-.back {
-    display: flex;
-    border-radius: 6px;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transition: ease-in-out 600ms;
-}
-
-.front {
-    font-family: "Montserrat", sans-serif;
-    background-size: cover;
-    background-blend-mode: overlay;
-    padding: 1rem;
-    font-size: 1.6rem;
-    font-weight: bolder;
-    text-align: center;
-    color: #fff;
-    overflow: hidden;
-    &:before {
-        position: absolute;
-        display: block;
-        content: "";
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, adjust-hue($primary, -20deg), $primary);
-        opacity: 0.25;
-        z-index: -1;
-    }
-    .card:hover & {
-        transform: rotateY(180deg);
-    }
-}
-
-.back {
-    background: #fff;
-    transform: rotateY(-180deg);
-    padding: 0 0.5em;
-    .button {
-        &:before {
-            box-shadow: 0 0 10px 10px rgba(#ff6f61, 0.25);
-            background-color: rgba(#ff6f61, 0.25);
+        $primary: hsl(222, 80%, 50%);
+        $primary-light: hsl(222, 50%, 95%);
+        $secondary: hsl(350, 80%, 50%);
+        $red: hsl(10, 80%, 50%);
+        $orange: hsl(50, 80%, 50%);
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
         }
-    }
-    .card:hover & {
-        transform: rotateY(0deg);
-    }
-}
-
-.items {
-    padding-left: 20px;
-    letter-spacing: 3px;
-}
-
-h1 {
-    font-size: 15px;
-    font-weight: 600;
-}
-
-p {
-    .fa[class~="angle"] {
-        font-size: 1.3rem;
-        position: relative;
-        top: 0.15rem;
-        margin: 0 20px;
-        cursor: pointer;
-        color: rgb(216, 216, 216);
-        transition: all 0.5s;
-        &:hover {
-            color: #ff6f61;
+        
+        .card {
+            flex: 1;
+            color: inherit;
+            cursor: pointer;
+            width: 100%;
+            height: 420px;
+            min-width: 225px;
+            perspective: 1000px;
+            margin: 0.5rem;
+            position: relative;
         }
-    }
-}
-
-div.back {
-    font-size: 12px;
-    font-weight: 100;
-    letter-spacing: 0.7px;
-}
-
-hr {
-    width: 70%;
-}
-
-textarea {
-    resize: none;
-}
-
-textarea::-webkit-input-placeholder {
-    font-size: 10px;
-}
+        
+        .front,
+        .back {
+            display: flex;
+            border-radius: 6px;
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            transition: ease-in-out 600ms;
+        }
+        
+        .front {
+            font-family: "Montserrat", sans-serif;
+            background-size: cover;
+            background-blend-mode: overlay;
+            padding: 1rem;
+            font-size: 1.6rem;
+            font-weight: bolder;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+            &:before {
+                position: absolute;
+                display: block;
+                content: "";
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(135deg, adjust-hue($primary, -20deg), $primary);
+                opacity: 0.25;
+                z-index: -1;
+            }
+            .card:hover & {
+                transform: rotateY(180deg);
+            }
+        }
+        
+        .back {
+            background: #fff;
+            transform: rotateY(-180deg);
+            padding: 0 0.5em;
+            .button {
+                &:before {
+                    box-shadow: 0 0 10px 10px rgba(#ff6f61, 0.25);
+                    background-color: rgba(#ff6f61, 0.25);
+                }
+            }
+            .card:hover & {
+                transform: rotateY(0deg);
+            }
+        }
+        
+        .items {
+            padding-left: 20px;
+            letter-spacing: 3px;
+        }
+        
+        .fecha {
+            display: inline;
+            width: 70%;
+            border-radius: 0.3rem;
+            padding: 0.375rem;
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: #5a5a5a;
+            background-color: #fff;
+        }
+        
+        h1 {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        
+        p {
+            .fa[class~="angle"] {
+                font-size: 1.3rem;
+                position: relative;
+                top: 0.15rem;
+                margin: 0 20px;
+                cursor: pointer;
+                color: rgb(216, 216, 216);
+                transition: all 0.5s;
+                &:hover {
+                    color: #ff6f61;
+                }
+            }
+        }
+        
+        div.back {
+            font-size: 12px;
+            font-weight: 100;
+            letter-spacing: 0.7px;
+        }
+        
+        hr {
+            width: 70%;
+        }
+        
+        textarea {
+            resize: none;
+        }
+        
+        textarea::-webkit-input-placeholder {
+            font-size: 0.8rem;
+        }
+        
+        textarea::-moz-placeholder {
+            font-size: 0.8rem;
+        }

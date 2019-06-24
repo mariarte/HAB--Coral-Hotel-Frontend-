@@ -18,6 +18,10 @@
                         <span id="qt">{{ experience.quantity }}</span>
                         <span class="fa fa-angle-right angle" (click)="addQuantity(experience)"></span>
                     </p>
+                    <div class="form-group">
+                        <label>FECHA</label>
+                        <input class="fecha form-control ml-2" type="date" value="2019-06-28" />
+                    </div>
                     <textarea #ngmodel="ngModel" [(ngModel)]="experience.comments" class="form-control mb-3" type="text" placeholder="Indica detalles importantes para tu reserva... ">{{ experience.comments }}</textarea>
                     <button class="button mb-0" (click)="addOrder(experience, ngmodel)">
                         <i class="fa fa-shopping-cart"></i> Seleccionar
