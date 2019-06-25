@@ -14,9 +14,10 @@
         <div class="title">
             <h1>{{booking.title}}</h1>
             <i class="fas fa-comment-dots"></i>
-            <textarea class="p_comments mx-auto" *ngIf="booking.comments !== '' " (keyup)="updateBookingComments(booking, $event)">
+            <!-- <textarea class="mx-auto" *ngIf="booking.comments !== '' " (keyup)="updateBookingComments(booking, $event)">
                 {{ booking.comments }}
-            </textarea>
+            </textarea> -->
+            <textarea class="mx-auto" *ngIf="booking.comments !== '' " (keyup)="updateBookingComments(booking, $event)">{{ booking.comments }}</textarea>
         </div>
 
         <div class="dates">
