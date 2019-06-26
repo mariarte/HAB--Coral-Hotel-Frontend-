@@ -20,4 +20,16 @@ export class BookingConfirmedService {
       .get(`${environment.apiBaseUrl}/order/confirmed`)
       .pipe(tap((bookings: Booking[]) => (this.bookings = bookings)));
   }
+
+  /**
+   * Función que obtiene la suma total del precio de experiences confirmadas
+   * @return {Number} total
+   */
+  getTotalAccount() {
+    let total = 0;
+    this.bookings.forEach(
+      booking => (total = total + booking.price * booking.units)
+    );
+    return total;
+  }
 }

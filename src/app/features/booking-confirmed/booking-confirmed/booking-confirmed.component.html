@@ -12,8 +12,7 @@
             <h1>{{booking.title}}</h1>
             <i class="fas fa-comment-dots"></i>
             <textarea class="p_comments pl-4 mx-auto" *ngIf="booking.comments !== '' " readonly>{{ booking.comments }}
-                </textarea>
-            <!-- <p class="p_commentsmx-auto" *ngIf="booking.comments !== '' ">"{{booking.comments}}"<i class="fas fa-comment-dots"></i></p> -->
+            </textarea>
         </div>
         <div class="dates">
             <ul>
@@ -22,5 +21,8 @@
                 <li>{{booking.confirmedAt | date:' dd-MMM-yyyy - HH:mm:ss ' : 'navigator.languaje' }}<i class="far fa-calendar-alt"></i></li>
             </ul>
         </div>
+    </div>
+    <div class="detail">
+        <sn-ticket-detail></sn-ticket-detail>
     </div>
 </div>

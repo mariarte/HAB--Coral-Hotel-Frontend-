@@ -13,6 +13,7 @@ import { SearchComponent } from "./search/search.component";
 import { BadgeComponent } from "./badge/badge.component";
 import { FormsModule } from "@angular/forms";
 import { PhoneComponent } from "./phone/phone.component";
+import { TicketDetailComponent } from "./ticket-detail/ticket-detail.component";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PhoneComponent } from "./phone/phone.component";
     ToastComponent,
     SearchComponent,
     BadgeComponent,
-    PhoneComponent
+    PhoneComponent,
+    TicketDetailComponent
   ],
   imports: [CommonModule, RouterModule, SharedModule, FormsModule],
   exports: [
@@ -36,7 +38,8 @@ import { PhoneComponent } from "./phone/phone.component";
     ToastComponent,
     CardComponent,
     SearchComponent,
-    BadgeComponent
+    BadgeComponent,
+    TicketDetailComponent
   ]
 })
 export class LayoutModule {}

@@ -1,0 +1,14 @@
+<div class="container animated fadeIn mb-5" *ngIf="bookingConfirmedService.bookings.length !== 0">
+    <div class="card p-2">
+        <div class="title">
+            <h1>COSTE TOTAL DE EXPERIENCIAS : </h1>
+        </div>
+        <div class="m-2">
+            <ul>
+                <li class="mx-auto">{{bookingConfirmedService.getTotalAccount()}} €
+                    <i class="fas fa-euro-sign"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
